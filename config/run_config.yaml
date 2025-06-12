@@ -1,0 +1,11 @@
+raw_data_dir: 'raw_data_20250612'
+input_glob: 'table_1*.csv'
+output_dir: 'output'
+
+numeric_cols:
+  - 本期采购价
+  - 国内运费
+  - 国际运费
+  - 仓库操作费
+
+market_rule_config: 'config/market_rule_config_TH.yaml'

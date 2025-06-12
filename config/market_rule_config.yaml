@@ -1,0 +1,29 @@
+mapping:
+  product_status_map:
+    - 地区
+    - 平台
+    - 产品状态映射列
+
+promotion_mapping_columns:
+  - 本店闪购和官方闪购价
+  - 购物满金额送赠品
+  - 同款产品买送
+  - 同款/不同款产品套餐
+  - 优惠券(RM)/加购优惠
+  - 运费促销(RM)
+
+violation_mapping_columns:
+  - 违规处罚
+  - 其它
+
+extra_operation_rules:
+  member_segment_rules:
+    - 新客首购优惠券建议
+    - 会员专属折扣策略
+  product_lifecycle_rules:
+    - 新品期天数
+    - 成熟期天数
+    - 尾货期策略（是否允许礼包、折扣限度）
+  review_management_rules:
+    - 差评占比阈值
+    - 差评关键词屏蔽建议
