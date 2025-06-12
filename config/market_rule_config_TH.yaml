@@ -1,0 +1,59 @@
+# market_rule_config_TH.yaml
+# Version: v1.0
+# Last updated: 2025-06-13
+# Source: 泰国市场规则.csv
+
+market_rule:
+  meta:
+    country: 泰国
+    platform: Shopee
+    update_date: "2025-04-10"
+    last_verified: "2025-06-13"
+
+  rules:
+    flash_sale:
+      desc: >
+        1. 本店闪购禁止每日都开启闪购，一个月只能开启≤4次闪购。
+        2. 闪购价各变体减10泰铢（如无特定要求）。
+
+    gift_on_purchase:
+      desc: >
+        店内可在“附加交易”中添加满减活动，满250泰铢任意赠送盲盒1个
+        （适用产品状态：清库存 / 自由定价）。
+
+    buy_x_get_y_same_product:
+      desc: >
+        同款产品买赠套餐：
+        1. 第二瓶半价（日常售价 A + A/2）。
+        2. 活动价为 A + A/2 - 20，有第二瓶加价说明。
+
+    buy_x_get_y_diff_product:
+      desc: >
+        不同款产品买赠套餐：
+        1. 两件产品组合 A + B - 25 泰铢。
+        2. 三件产品组合 A + B + C - 50 泰铢。
+
+    coupon_discount:
+      desc: >
+        优惠券(Regular Voucher)：
+        1. 关注礼 10 减 5 THB。
+        2. 满 300 减 30 THB。
+        3. 加购满 2 件 9 折。
+
+    shipping_promo:
+      desc: >
+        1. 只能报官方 4% 佣金免邮项目。
+        2. 满 2 件起可以设置部分产品免邮，官方需审核。
+
+    violation_penalty:
+      desc: >
+        1. 链接低价处罚标准：
+           - 若同一条商品低价链接被多人当天重复举报，按 1 条处理。
+           - 违规 1 次/2 次/3 次，对应处罚等级升级。
+
+    other:
+      desc: >
+        2025 年 3 月 1 号起，所有 礼品/清库存/自由定价 或其他低价性质（与主链接相差 70 THB）
+        的 SKU 要强制打标 / 处理，防止低价绕规则。
+
+# END OF FILE
