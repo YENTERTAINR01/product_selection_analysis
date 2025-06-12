@@ -1,13 +1,17 @@
-# Force text files to be UTF-8 with LF line endings
+# .gitattributes for Product Selection Analysis
+# Version: v1.4.0
+# Last update: 2025-06-13
+
+# Ensure consistent text files
 * text=auto eol=lf
 
-# Explicitly mark documentation files as UTF-8
-*.md text eol=lf
-*.txt text eol=lf
+# Explicitly set language for GitHub linguist
+*.py linguist-language=Python
+*.md linguist-language=Markdown
+*.yaml linguist-language=YAML
+*.yml linguist-language=YAML
+*.txt linguist-language=Text
 
-# Explicitly mark YAML files as UTF-8
-*.yaml text eol=lf
-*.yml text eol=lf
-
-# CSV (optional)
-*.csv text eol=lf
+# Exclude raw_data from linguist stats
+raw_data_* linguist-vendored
+market_rule/*.csv linguist-vendored
