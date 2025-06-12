@@ -1,53 +1,109 @@
 # ============================================
 # .gitignore for product_selection_analysis
-# Version: v1.4.0
+# Version: v1.4.0-PLUS
 # Last update: 2025-06-13
+# Author: YENTERTAINR01
 # ============================================
 
-# === 1️⃣ 忽略 Jupyter Notebook 临时文件
+# === 0️⃣ 通用 Python 忽略项 ===
+
+# Python Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C Extensions
+*.so
+
+# Unit Test / Coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Cython debug symbols
+cython_debug/
+
+# pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtualenv
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Jupyter Notebook
 .ipynb_checkpoints/
 
-# === 2️⃣ 忽略 Python 缓存
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# === 3️⃣ 忽略 VSCode 配置
-.vscode/
-
-# === 4️⃣ 忽略 IDEA 配置
+# PyCharm
 .idea/
 
-# === 5️⃣ 忽略 OS 文件
+# VSCode
+.vscode/
+
+# OS Generated files
 .DS_Store
 Thumbs.db
 
-# === 6️⃣ 忽略 运行日志
+# System Swap files
+*.swp
+*.swo
+
+# Editor backup files
+*~
+
+# === 1️⃣ 项目专用规则 (product_selection_analysis) ===
+
+# 运行日志
 *.log
 output/*.log
 
-# === 7️⃣ 忽略 输出结果文件夹
+# 输出结果文件夹
 output/
-!output/.gitkeep    # 保留 output 目录结构（空目录）
+!output/.gitkeep    # 保留空目录
 
-# === 8️⃣ 忽略 原始数据文件夹
-raw_data_*/        # 包含 raw_data_20250612 这种
+# 原始数据文件夹
+raw_data_*/         # 包含 raw_data_20250612 这种动态目录
+raw_data/
 
-# === 9️⃣ 忽略 市场规则原始表格（备份用）
+# 市场规则原始表格 (只上传 .yaml 配置)
 market_rule/*.csv
 
-# === 10️⃣ 忽略 未来其他数据备份
+# 未来其他数据备份
 backup/
 *.bak
 *.tmp
 
-# === 11️⃣ 保留 config 文件夹
+# 保留 config 配置文件夹
 !config/
 !config/*.yaml
 !config/*.txt
 
-# === 12️⃣ 保留主运行脚本 & 文档
+# 保留运行主脚本和文档
 !run_selection_analysis.py
 !run_init_structure.py
 !README.md
@@ -55,17 +111,8 @@ backup/
 !push_flow.md
 !future_roadmap.md
 
-# === 13️⃣ 忽略系统 swap 临时文件
-*.swp
-*.swo
-
-# === 14️⃣ 忽略其他编辑器临时文件
-*~
-
-# === 15️⃣ 备注
-# - output/ 忽略结果文件
-# - raw_data_xxx/ 忽略敏感生产数据
-# - config/ 保留配置文件
-# - 市场规则 market_rule/ 仅保留配置（.yaml），原始 csv 不上传
+# 其他
+# 保留 switch_to_main.sh (可选，如果你确认希望保留)
+!switch_to_main.sh
 
 # END OF FILE
