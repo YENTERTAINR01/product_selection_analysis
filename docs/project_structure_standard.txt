@@ -1,0 +1,28 @@
+product_selection_analysis/
+├── config/
+│   ├── run_config.yaml
+│   ├── version_info.yaml
+│   ├── trend_keywords/
+│   │   ├── ID.txt
+│   │   ├── TH.txt
+│   │   ├── ...
+│   └── market_rules/
+│       ├── ID.csv
+│       ├── TH.csv
+│       ├── ...
+├── raw_data/
+│   ├── ID/
+│   │   ├── table_1_*.csv
+│   ├── TH/
+│   │   ├── table_1_*.csv
+│   └── ...
+├── output/
+│   ├── ID/
+│   │   ├── product_selection_analysis_result.xlsx
+│   ├── TH/
+│   │   ├── priority_products.csv
+│   └── ...
+├── run_selection_analysis_v1.5.py
+├── run_selection_analysis_multi_market_fixed.py
+├── push_flow.md
+└── README.md
