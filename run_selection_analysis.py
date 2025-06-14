@@ -1,9 +1,17 @@
 # run_selection_analysis.py
+<<<<<<< HEAD
 # 产品选品分析增强版 V1.4.1
 # 🚀 更新点：
 # - 新增 trend_keywords_file 配置，支持多市场趋势词文件
 # - run_config.yaml 配置 trend_keywords_file + market_code
 # - 优化 logging + 版本结构
+=======
+# 产品选品分析增强版 V1.4.0
+# 🚀 更新点：
+# - 新增 market_rule_config_TH.yaml 规范配置支持
+# - run_selection_analysis.py 增加市场规则加载 stub
+# - 维持版本信息 / 结构清晰定位
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
 
 import os
 import yaml
@@ -20,6 +28,10 @@ LOG_DIR = 'output'
 os.makedirs(LOG_DIR, exist_ok=True)
 LOG_FILE = os.path.join(LOG_DIR, 'selection_analysis.log')
 
+<<<<<<< HEAD
+=======
+# utf-8 handler
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -53,6 +65,10 @@ logging.info(f"Version: {version} | Compatibility: {compatibility} | Update Date
 logging.info("Update Log:")
 for log_entry in update_log:
     logging.info(f"- {log_entry}")
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
 # === [3] 读取 run_config.yaml ===
 with open('config/run_config.yaml', 'r', encoding='utf-8') as f:
     run_config = yaml.safe_load(f)
@@ -63,11 +79,14 @@ INPUT_GLOB = os.path.join(RAW_DATA_DIR, run_config['input_glob'])
 OUTPUT_DIR = os.path.join(BASE_DIR, run_config['output_dir'])
 NUMERIC_COLS = run_config['numeric_cols']
 
+<<<<<<< HEAD
 # 新增
 MARKET_CODE = run_config.get('market_code', 'TH')
 market_rule_config_path = run_config.get('market_rule_config_path', f'config/market_rule_config_{MARKET_CODE}.yaml')
 trend_keywords_file = run_config.get('trend_keywords_file', f'config/trend_keywords_{MARKET_CODE}.txt')
 
+=======
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # === [4] 读取 status_config.yaml ===
@@ -76,6 +95,7 @@ with open('config/status_config.yaml', 'r', encoding='utf-8') as f:
 
 status_keep = status_config['status_keep']
 
+<<<<<<< HEAD
 # === [5] 读取 trend_keywords_file ===
 if not os.path.exists(trend_keywords_file):
     logging.warning(f"未找到趋势词文件 {trend_keywords_file}，使用 fallback 通用趋势词 trend_keywords.txt")
@@ -91,6 +111,17 @@ with open(market_rule_config_path, 'r', encoding='utf-8') as f:
     market_rule_config = yaml.safe_load(f)
 
 logging.info(f"市场规则配置已加载: {market_rule_config_path}")
+=======
+# === [5] 读取 trend_keywords.txt ===
+with open('config/trend_keywords.txt', 'r', encoding='utf-8') as f:
+    trend_keywords = [line.strip() for line in f if line.strip()]
+
+# === [6] 读取 market_rule_config_TH.yaml ===
+with open('config/market_rule_config_TH.yaml', 'r', encoding='utf-8') as f:
+    market_rule_config = yaml.safe_load(f)
+
+logging.info("市场规则配置已加载 (market_rule_config_TH.yaml)")
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
 logging.info(f"当前平台规则更新日期: {market_rule_config['market_rule']['meta']['update_date']}")
 
 # === [7] 数据加载 ===
@@ -208,7 +239,11 @@ active['上新优先级'] = (
 priority_products = active.sort_values(
     by='上新优先级',
     ascending=False
+<<<<<<< HEAD
 )[['编号', 'sku', '中文名称', '产品类别', '规格', 'Shopee价格', '产品状态', '产品状态分类', '运营上架建议',
+=======
+)[['编号', 'sku', '中文名称', '产品类别', '产品状态', '产品状态分类', '运营上架建议',
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
    '匹配度', 'Shopee毛利率', 'SKU评分', '新品优先权重', '上新优先级']]
 
 priority_products.to_csv(
@@ -217,6 +252,7 @@ priority_products.to_csv(
     encoding='utf_8_sig'
 )
 
+<<<<<<< HEAD
 # === [15] 生成 SKU 文件夹结构 ===
 EXPORT_DIR = os.path.join(BASE_DIR, f'output/product_manage_{MARKET_CODE}')
 os.makedirs(EXPORT_DIR, exist_ok=True)
@@ -236,6 +272,11 @@ for idx, row in priority_products.reset_index(drop=True).iterrows():
 
 logging.info(f"已生成 {len(priority_products)} 个 SKU 文件夹至：{EXPORT_DIR}")
 print(f"已生成 {len(priority_products)} 个 SKU 文件夹至：{EXPORT_DIR}")
+=======
+with pd.ExcelWriter(os.path.join(OUTPUT_DIR, 'product_selection_analysis_result.xlsx'), engine='openpyxl') as writer:
+    priority_products.to_excel(writer, sheet_name='优先上新产品', index=False)
+    active.to_excel(writer, sheet_name='活跃产品全表', index=False)
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
 
 # === version_info.yaml 更新 ===
 try:

@@ -9,7 +9,10 @@
 status_keep:
   - 正常备货
   - 清库存
+<<<<<<< HEAD
 #  - 礼品
+=======
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
 
 # ===================
 # ✅ 2️⃣ status_category_mapping

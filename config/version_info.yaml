@@ -1,6 +1,10 @@
 compatibility: v1.x
 description: 选品分析增强版 V1.4.2 - 支持市场规则初步集成
+<<<<<<< HEAD
 last_run_date: '2025-06-13 13:53:11'
+=======
+last_run_date: '2025-06-13 04:52:40'
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
 update_date: 2025-06-13
 update_log:
 - 初始化标准版 version_info.yaml 模板

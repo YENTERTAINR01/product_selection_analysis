@@ -42,7 +42,10 @@ git push
 6️⃣ 本项目目录 Git 结构建议
 product_selection_analysis/
 ├── config/                    # 配置文件 (version_info.yaml / run_config.yaml / status_config.yaml / trend_keywords.txt / market_rule_config_TH.yaml)
+<<<<<<< HEAD
 │   └── archive/              # 暂不启用国家的配置归档（如 TH）
+=======
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
 ├── output/                    # 输出结果（.gitignore 已忽略）
 ├── raw_data_xxx/              # 原始数据（.gitignore 已忽略）
 ├── run_selection_analysis.py  # 主运行脚本
