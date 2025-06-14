@@ -1,9 +1,9 @@
-# run_selection_analysis.py
-# 产品选品分析增强版 V1.4.1
+# run_selection_analysis_v1.5.py
+# 产品选品分析增强版 V1.5
 # 🚀 更新点：
-# - 新增 trend_keywords_file 配置，支持多市场趋势词文件
-# - run_config.yaml 配置 trend_keywords_file + market_code
-# - 优化 logging + 版本结构
+# - 优化输出文件名，支持按市场代码命名文件
+# - 添加排序字段并生成排名列
+# - 增强报告结构，确保字段清晰
 
 import os
 import yaml
@@ -53,6 +53,7 @@ logging.info(f"Version: {version} | Compatibility: {compatibility} | Update Date
 logging.info("Update Log:")
 for log_entry in update_log:
     logging.info(f"- {log_entry}")
+
 # === [3] 读取 run_config.yaml ===
 with open('config/run_config.yaml', 'r', encoding='utf-8') as f:
     run_config = yaml.safe_load(f)
@@ -63,20 +64,48 @@ INPUT_GLOB = os.path.join(RAW_DATA_DIR, run_config['input_glob'])
 OUTPUT_DIR = os.path.join(BASE_DIR, run_config['output_dir'])
 NUMERIC_COLS = run_config['numeric_cols']
 
-# 新增
+# 新增配置：市场代码
 MARKET_CODE = run_config.get('market_code', 'TH')
 market_rule_config_path = run_config.get('market_rule_config_path', f'config/market_rule_config_{MARKET_CODE}.yaml')
+
+# 新增：动态加载趋势关键词文件路径
 trend_keywords_file = run_config.get('trend_keywords_file', f'config/trend_keywords_{MARKET_CODE}.txt')
 
+# === [4] 读取 trend_keywords_mapping.yaml ===
+# 如果存在 trend_keywords_mapping.yaml，就从中映射文件路径
+mapping_path = 'config/trend_keywords_mapping.yaml'
+if os.path.exists(mapping_path):
+    with open(mapping_path, 'r', encoding='utf-8') as f:
+        mapping_cfg = yaml.safe_load(f)
+    mapped_file = mapping_cfg.get('mapping', {}).get(MARKET_CODE)
+    if mapped_file:
+        trend_keywords_file = f'config/{mapped_file}'
+        logging.info(f"趋势关键词文件通过映射表加载: {trend_keywords_file}")
+
+# 确保输出目录存在
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# === [4] 读取 status_config.yaml ===
-with open('config/status_config.yaml', 'r', encoding='utf-8') as f:
-    status_config = yaml.safe_load(f)
+# === [5] 读取 raw_data_ID_20250613 数据 ===
+all_files = glob.glob(INPUT_GLOB)  # INPUT_GLOB 配置了 raw_data_dir 和 input_glob 模式
+df_list = [pd.read_csv(f, encoding='utf-8') for f in all_files]
+store_data = pd.concat(df_list, ignore_index=True)
+store_data = store_data.drop_duplicates(subset=['编号'])
 
-status_keep = status_config['status_keep']
+logging.info(f"共加载 {len(all_files)} 个文件，去重后总行数：{store_data.shape[0]}")
 
-# === [5] 读取 trend_keywords_file ===
+# === [6] 读取印尼市场规则 CSV 文件 ===
+market_rule_csv_path = 'config/market_rule_config_ID.csv'
+
+if os.path.exists(market_rule_csv_path):
+    # 使用 pandas 读取市场规则 CSV 文件
+    market_rule_df = pd.read_csv(market_rule_csv_path, encoding='utf-8')
+    logging.info(f"市场规则配置已加载: {market_rule_csv_path}")
+    logging.info(f"市场规则数据（前5行）:\n{market_rule_df.head()}")
+else:
+    logging.error(f"市场规则配置文件未找到: {market_rule_csv_path}")
+    raise FileNotFoundError(f"Market rule config CSV file not found: {market_rule_csv_path}")
+
+# === [7] 读取趋势关键词文件 ===
 if not os.path.exists(trend_keywords_file):
     logging.warning(f"未找到趋势词文件 {trend_keywords_file}，使用 fallback 通用趋势词 trend_keywords.txt")
     trend_keywords_file = 'config/trend_keywords.txt'
@@ -85,13 +114,6 @@ with open(trend_keywords_file, 'r', encoding='utf-8') as f:
     trend_keywords = [line.strip() for line in f if line.strip()]
 
 logging.info(f"趋势关键词已加载: {trend_keywords_file} （共 {len(trend_keywords)} 个词）")
-
-# === [6] 读取 market_rule_config.yaml ===
-with open(market_rule_config_path, 'r', encoding='utf-8') as f:
-    market_rule_config = yaml.safe_load(f)
-
-logging.info(f"市场规则配置已加载: {market_rule_config_path}")
-logging.info(f"当前平台规则更新日期: {market_rule_config['market_rule']['meta']['update_date']}")
 
 # === [7] 数据加载 ===
 all_files = glob.glob(INPUT_GLOB)
@@ -152,6 +174,17 @@ removed_rows.to_csv(os.path.join(OUTPUT_DIR, 'removed_rows.csv'), index=False, e
 logging.info(f"剔除异常 Shopee毛利率 行数：{removed_rows.shape[0]}")
 
 # === 活跃产品筛选 ===
+status_config_path = os.path.join('config', 'status_config.yaml')
+with open(status_config_path, 'r', encoding='utf-8') as f:
+    status_config = yaml.safe_load(f)
+
+status_keep = status_config.get('status_keep', [])
+if not status_keep:
+    logging.warning("⚠️ status_keep 为空，使用默认状态")
+    status_keep = ['正常备货', '清库存', '礼品']
+
+logging.info(f"已加载 status_keep 状态列表，共 {len(status_keep)} 项")
+
 active = store_data[store_data['产品状态'].isin(status_keep)].copy()
 print("活跃产品数量：", active.shape[0])
 logging.info(f"活跃产品数量：{active.shape[0]}")
@@ -167,10 +200,10 @@ def calculate_match(text, keywords):
 active['关键词'] = active['关键词'].fillna(active['中文名称'])
 active['匹配度'] = active['关键词'].apply(lambda x: calculate_match(x, trend_keywords))
 
-# === [12] SKU评分 修正 ===
+# === SKU评分 修正 ===
 active['SKU评分'] = 100
 
-# === [13] 产品状态分类 ===
+# === 产品状态分类 ===
 def classify_status(row):
     if row['产品状态'] == '正常备货':
         return '主力上新'
@@ -183,7 +216,7 @@ def classify_status(row):
 
 active['产品状态分类'] = active.apply(classify_status, axis=1)
 
-# === [13] 运营上架建议 ===
+# === 运营上架建议 ===
 def gen_ope_advice(row):
     if row['产品状态'] == '正常备货':
         return '推荐上架（上架价 ≥ 最低价，禁止低价违规）'
@@ -194,7 +227,7 @@ def gen_ope_advice(row):
 
 active['运营上架建议'] = active.apply(gen_ope_advice, axis=1)
 
-# === [14] 上新优先级计算 ===
+# === 上新优先级计算 ===
 active['Shopee毛利率_clip'] = active['Shopee毛利率'].clip(lower=0, upper=1)
 active['新品优先权重'] = active['编号'] / active['编号'].max()
 
@@ -211,13 +244,14 @@ priority_products = active.sort_values(
 )[['编号', 'sku', '中文名称', '产品类别', '规格', 'Shopee价格', '产品状态', '产品状态分类', '运营上架建议',
    '匹配度', 'Shopee毛利率', 'SKU评分', '新品优先权重', '上新优先级']]
 
+# 输出文件名更具标识性
 priority_products.to_csv(
-    os.path.join(OUTPUT_DIR, 'priority_products.csv'),
+    os.path.join(OUTPUT_DIR, f'priority_products_{MARKET_CODE}.csv'),
     index=False,
     encoding='utf_8_sig'
 )
 
-# === [15] 生成 SKU 文件夹结构 ===
+# === 生成 SKU 文件夹结构 ===
 EXPORT_DIR = os.path.join(BASE_DIR, f'output/product_manage_{MARKET_CODE}')
 os.makedirs(EXPORT_DIR, exist_ok=True)
 
@@ -249,3 +283,13 @@ except Exception as e:
 # === 结束 ===
 print("\n✅ 数据处理完毕，增强版结果已输出到：", OUTPUT_DIR)
 logging.info("✅ 数据处理完毕，增强版结果已输出")
+
+
+# === 运行完成后更新 version_info.yaml ===
+version_info['last_run_date'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+try:
+    with open('config/version_info.yaml', 'w', encoding='utf-8') as f:
+        yaml.safe_dump(version_info, f, allow_unicode=True)
+    logging.info(f"🕓 已更新 version_info.yaml → {version_info['last_run_date']}")
+except Exception as e:
+    logging.error(f"⚠️ 写入 version_info.yaml 失败：{e}")

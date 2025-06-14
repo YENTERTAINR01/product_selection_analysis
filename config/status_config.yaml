@@ -9,6 +9,7 @@
 status_keep:
   - 正常备货
   - 清库存
+#  - 礼品
 
 # ===================
 # ✅ 2️⃣ status_category_mapping
