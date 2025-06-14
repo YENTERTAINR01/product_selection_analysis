@@ -1,8 +1,5 @@
-# 📋 运行配置文件（多市场支持）
-# 更新日期：2025-06-14
-# 说明：本配置支持 Shopee / Lazada 平台在东南亚市场的多市场运行任务。
-
-# 🗺️ 国家名称映射（简称 → 中文）
+version: 1.5.0
+last_run_date: '2025-06-14'
 country_name_map:
   HK: 中国香港
   ID: 印尼
@@ -13,67 +10,49 @@ country_name_map:
   TH: 泰国
   TW: 中国台湾
   VN: 越南
-
-# 📆 最近一次运行时间
-last_run_date: '2025-06-14'
-
-# 🌏 多市场配置（每条为一个市场任务）
-markets:
-  - name: shopee_ID
-    platform: shopee
-    country_code: ID
-    category: 通货
-    input_glob: table_1*.csv
-    raw_data_dir: input/raw_data_ID/
-    output_dir: output/product_manage_ID/
-    rule_config: config/market_rules/market_rule_config_ID.csv
-    trend_keywords_file: config/trend_keywords/trend_keywords_ID.txt
-
-  - name: shopee_TH
-    platform: shopee
-    country_code: TH
-    category: 通货
-    input_glob: table_1*.csv
-    raw_data_dir: input/raw_data_TH/
-    output_dir: output/product_manage_TH/
-    rule_config: config/market_rules/market_rule_config_TH.csv
-    trend_keywords_file: config/trend_keywords/trend_keywords_TH.txt
-
-  - name: lazada_MY
-    platform: lazada
-    country_code: MY
-    category: 通货
-    input_glob: table_1*.csv
-    raw_data_dir: input/raw_data_MY/
-    output_dir: output/product_manage_MY/
-    rule_config: config/market_rules/market_rule_config_MY.csv
-    trend_keywords_file: config/trend_keywords/trend_keywords_MY.txt
-
-  # ... 可继续添加 MO/HK/TW/SG/VN/PH 等其他市场
-
-# 🔢 数值列（用于分析计算）
 numeric_cols:
-  - 本期采购价
-  - 国内运费
-  - 国际运费
-  - 仓库操作费
-
-# 🎯 输出设置（筛选和格式）
-output:
-  filters:
-    min_margin: 0.2
-    min_review_count: 50
-  formats:
-    - csv
-    - excel
-
-# 🧮 权重设置（SKU 打分权重）
+- 本期采购价
+- 国内运费
+- 国际运费
+- 仓库操作费
 priority_weights:
   matching_degree: 5
   shopee_margin: 100
   new_product_weight: 10
   review_score: 15
   sales_velocity: 20
-
-# 🏷️ 配置版本
-version: 1.5.0
+output:
+  filters:
+    min_margin: 0.2
+    min_review_count: 50
+  formats:
+  - csv
+  - excel
+markets:
+- category: 通货
+  country_code: ID
+  platform: shopee
+  name: shopee_ID
+  input_glob: table_1*.csv
+  raw_data_dir: input/raw_data_ID/
+  output_dir: output/product_manage_ID/
+  rule_config: config/market_rules/market_rule_config_ID.csv
+  trend_keywords_file: config/trend_keywords/trend_keywords_ID.txt
+- category: 通货
+  country_code: TH
+  platform: shopee
+  name: shopee_TH
+  input_glob: table_1*.csv
+  raw_data_dir: input/raw_data_TH/
+  output_dir: output/product_manage_TH/
+  rule_config: config/market_rules/market_rule_config_TH.csv
+  trend_keywords_file: config/trend_keywords/trend_keywords_TH.txt
+- category: 通货
+  country_code: MY
+  platform: lazada
+  name: lazada_MY
+  input_glob: table_1*.csv
+  raw_data_dir: input/raw_data_MY/
+  output_dir: output/product_manage_MY/
+  rule_config: config/market_rules/market_rule_config_MY.csv
+  trend_keywords_file: config/trend_keywords/trend_keywords_MY.txt
