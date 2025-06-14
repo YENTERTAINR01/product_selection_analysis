@@ -1,47 +1,99 @@
-## 🏷️ Version
 
-- Version: v1.4.0
-- Compatibility: v1.x
-- Last Updated: 2025-06-13
+# 📦 Product Selection Analysis / 产品选品分析系统
 
-## 🚀 Major Updates
+This project provides a flexible and extensible product selection pipeline that supports **multi-market configurations**, dynamic trend keyword mapping, SKU scoring, and market-specific rule enforcement.
 
-- Added full support for `market_rule_config.yaml` (market rules per product status)
-- Improved `version_info.yaml` auto update (last_run_date)
-- Improved log format (Chinese supported)
-- Unified file structure for GitHub compatibility
-- Selection formula optimized: `Matching Degree * 5 + Shopee Margin * 100 + New Product Weight * 10`
-- Cleaned unvaluable column: SKU评分
-- Automatically remove abnormal Shopee Margin rows
-- New `priority_products.csv` and `product_selection_analysis_result.xlsx` output
+本项目为一套灵活可扩展的产品选品分析系统，支持多国家配置、关键词趋势匹配、SKU打分机制及市场规则加载。
 
-## 🗂️ Config Files
+---
 
-config/
-├── version_info.yaml
-├── run_config.yaml
-├── status_config.yaml
-├── trend_keywords.txt
-├── market_rule_config_TH.yaml <-- ✅ NEW
+## ✅ Features / 功能亮点
 
-## ⚙️ Usage
+- ✅ Multi-market keyword mapping (via `trend_keywords_mapping.yaml`)
+- ✅ 市场规则支持（每个国家配置单独规则）
+- ✅ SKU 优选打分系统：匹配度 + 毛利率 + 新品权重
+- ✅ 自动生成 SKU 文件夹命名结构
+- ✅ YAML 配置结构清晰，支持版本更新与 Git 管理
+- ✅ 当前启用市场：**Indonesia (ID)**；未来市场如 TH 已归档待激活
 
+---
+
+## 📁 Directory Structure / 项目结构
+
+```
+product_selection_analysis/
+├── config/
+│   ├── run_config.yaml               # 全局运行配置
+│   ├── version_info.yaml             # 版本信息记录
+│   ├── trend_keywords_mapping.yaml   # 国家代码 → 趋势词文件映射
+│   ├── status_config.yaml            # 状态保留筛选配置
+│   ├── market_rule_config_ID.yaml    # 印尼市场规则
+│   ├── trend_keywords_ID.txt         # 印尼关键词文件
+│   └── archive/                      # 已归档国家配置，如泰国 TH
+│       ├── trend_keywords_TH.txt
+│       └── market_rule_config_TH.yaml
+├── output/                           # 输出结果（自动生成）
+├── raw_data_xxxx/                    # 原始数据（不建议推送）
+├── run_selection_analysis.py         # 主运行脚本
+├── run_selection_analysis_v1.5.py    # 增强版本
+├── README.md                         # 当前文档（中英文）
+├── push_flow.md                      # Git 推送流程文档
+└── .gitignore
+```
+
+---
+
+## 🌍 Supported Markets / 支持市场状态
+
+| Code | 国家 / Market | 启用状态 | 状态说明                    |
+|------|----------------|----------|-----------------------------|
+| ID   | 印尼           | ✅ 启用中 | 已配置关键词和规则          |
+| TH   | 泰国           | ⏸️ 暂未启用 | 配置已归档到 config/archive |
+| ...  | 其他市场       | ❌ 待支持 | 后续新增                    |
+
+---
+
+## 🚀 Usage / 使用方式
+
+1. Edit `run_config.yaml`:
+```yaml
+country_code: "ID"
+platform: "Shopee"
+category: "通货"
+```
+
+2. Map keywords in `trend_keywords_mapping.yaml`:
+```yaml
+mapping:
+  ID: trend_keywords_ID.txt
+```
+
+3. Run:
 ```bash
-# 1️⃣ Configure your run_config.yaml (raw_data_dir + market_rule_config)
-# 2️⃣ Place raw_data files into raw_data_xxx/
-# 3️⃣ Run:
-python run_selection_analysis.py
-# 4️⃣ Check output folder
+python run_selection_analysis_v1.5.py
+```
 
+4. Output will appear under:
+```
+output/product_manage_ID/
+```
 
+---
 
-🏷️ Future Roadmap
-# - Support dynamic mapping of "运营上架建议" from market_rule_config.yaml
+## 🔖 Versioning / 版本控制
 
-Support market_rule_config auto mapping to 运营上架建议 (currently manual mapping in gen_ope_advice)
+- 查看 `config/version_info.yaml` 获取当前版本号与更新记录。
+- 所有变更需更新 `update_log` 并附带时间戳。
 
-Support advanced product tagging (e.g. 买赠适用 / 礼品包适用 / 满赠适用 / 新品强推)
+---
 
-Support multi-market configurations (SG / MY / VN)
+## ✅ Git Tips / Git 使用建议
 
-Integrate product trend mining model (可选）
+- ❌ 不要提交 raw_data 和 output 目录下内容
+- ✅ 所有配置文件集中在 `config/`
+- ⏸️ 暂不启用国家配置统一放入 `config/archive/`
+- 📄 查看 `push_flow.md` 获取标准 Git 操作说明
+
+---
+
+🚀 Keep iterating – 每一次选品，都是一次迭代的机会。

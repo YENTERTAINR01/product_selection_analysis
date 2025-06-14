@@ -1,0 +1,117 @@
+# trend_keywords_ID.txt
+# 印尼护肤赛道关键词（2024 Q3 – 2025 Q2）
+# 市场代码: ID
+# 描述: 印尼市场护肤品趋势关键词，涵盖功能、形态、认证、成分、热点及目标人群
+
+# 功能功效型 Function & Benefit
+美白
+提亮
+补水
+滋润
+锁水
+祛痘
+净化毛孔
+深层清洁
+抗皱
+紧致
+淡纹
+抗氧化
+修复
+舒缓
+消炎
+降敏
+控油
+去油光
+去角质
+焕肤
+防晒
+抗污染
+防水
+遮瑕
+抗衰老
+
+# 产品形态 Form & Format
+精华
+精华液
+精华露
+爽肤水
+化妆水
+乳液
+面霜
+洁面
+洗面奶
+洁面啫喱
+低 pH 洁面
+面膜
+面膜贴
+喷雾
+防晒霜
+眼霜
+眼部精华
+底妆气垫
+睡眠面膜
+卸妆水
+护唇膏
+
+# 认证与文化 Certification & Culture
+Halal 认证
+清真认证
+天然
+有机
+纯素
+vegan
+干净美容
+Cruelty-Free
+无动物实验
+环保包装
+成分透明
+Clean Beauty
+可持续包装
+本地化品牌
+清真供应链
+
+# 热门成分 Ingredients
+烟酰胺
+维生素 C
+视黄醇
+巴库乔油
+积雪草
+水杨酸
+透明质酸
+蜗牛原液
+植物提取
+SPF 30
+SPF 50
+神经酰胺
+绿球藻素
+穿心莲
+胶原蛋白
+熊果苷
+
+# 趋势热点 Trend Signals
+Natural Skincare
+Vegan Beauty
+Clean Beauty
+Anti-Pollution Serum
+韩系融合
+K-Beauty Fusion
+Halal Skincare Surge
+可持续美妆
+社交电商
+Z世代种草
+低价高性价比
+直播带货
+男性护肤
+
+# 目标人群 & 场景 Audience & Scenario
+Gen Z
+Millennials
+敏感肌
+日常护理
+便携装
+性价比高
+城市白领
+穆斯林女性
+户外场景
+节庆促销
+学生群体
