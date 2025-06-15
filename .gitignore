@@ -1,119 +1,72 @@
-# ============================================
-# .gitignore for product_selection_analysis
-# Version: v1.4.0-PLUS
-# Last update: 2025-06-13
-# Author: YENTERTAINR01
-# ============================================
-
-# === 0️⃣ 通用 Python 忽略项 ===
-
-# Python Bytecode
+# === Python 基本忽略项 ===
 __pycache__/
 *.py[cod]
-*$py.class
-
-# C Extensions
+*.pyo
 *.so
+*.ipynb_checkpoints/
 
-# Unit Test / Coverage
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# Cython debug symbols
-cython_debug/
-
-# pip
-pip-log.txt
-pip-delete-this-directory.txt
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Virtualenv
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-__pypackages__/
-
-# Jupyter Notebook
-.ipynb_checkpoints/
-
-# PyCharm
-.idea/
-
-# VSCode
+# === IDE / 编辑器 ===
 .vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
 
-# OS Generated files
+# === 环境文件 ===
+.env
+*.env
+.venv/
+venv/
+*.egg-info/
+
+# === 系统文件 ===
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# System Swap files
-*.swp
-*.swo
-
-# Editor backup files
-*~
-
-# === 1️⃣ 项目专用规则 (product_selection_analysis) ===
-
-# 运行日志
+# === 临时文件 ===
 *.log
-output/*.log
-
-# 输出结果文件夹
-output/
-!output/.gitkeep    # 保留空目录
-
-# 原始数据文件夹
-raw_data_*/         # 包含 raw_data_20250612 这种动态目录
-raw_data/
-
-# 市场规则原始表格 (只上传 .yaml 配置)
-market_rule/*.csv
-
-# 未来其他数据备份
-backup/
 *.bak
+*.swp
 *.tmp
+*.lock
+*.old
+nohup.out
 
-# 保留 config 配置文件夹
-!config/
-!config/*.yaml
-!config/*.txt
+# === 项目数据目录 ===
+# 输入原始数据（敏感）
+input/raw_data_*/
+raw_data_*/
 
-# 保留运行主脚本和文档
-!run_selection_analysis.py
-!run_init_structure.py
-!README.md
-!README_ZH.md
-!push_flow.md
-!future_roadmap.md
+# 输出文件
+output/
+product_selection_analysis_result/
+product_selection_results.xlsx
+priority_products_*.csv
+*.gif
+*.mp4
+*.png
+*.jpg
+*.jpeg
 
-# 其他
-# 保留 switch_to_main.sh (可选，如果你确认希望保留)
-!switch_to_main.sh
+# 配置文件（本地）
+config/local_*.yaml
+config/local_*.json
 
-# END OF FILE
-input/raw_data_*/**/*.csv
+# Markdown缓存与分析生成结果
+*.md~
+README.md~
+future_roadmap.md~
+
+# === 压缩和导出文件 ===
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+# === Jupyter Notebook 临时导出 ===
+*.nbconvert.ipynb
+*.nb.html
+*.pdf
+
+# === Git自身 ===
+*.orig
