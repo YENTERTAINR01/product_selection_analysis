@@ -116,3 +116,4 @@ backup/
 !switch_to_main.sh
 
 # END OF FILE
+input/raw_data_*/**/*.csv

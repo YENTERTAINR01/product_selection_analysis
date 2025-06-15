@@ -1,0 +1,1340 @@
+A_A@DESKTOP-N6C4M46 MINGW64 /c/D/Auser/public/jingluo/product_selection_analysis (main)
+$ ^C
+
+A_A@DESKTOP-N6C4M46 MINGW64 /c/D/Auser/public/jingluo/product_selection_analysis (main)
+$ tree /f > project_structure.txt
+bash: tree: command not found
+
+A_A@DESKTOP-N6C4M46 MINGW64 /c/D/Auser/public/jingluo/product_selection_analysis (main)
+$ tree /f | clip
+bash: tree: command not found
+
+A_A@DESKTOP-N6C4M46 MINGW64 /c/D/Auser/public/jingluo/product_selection_analysis (main)
+$ ls -R
+.:
+LICENSE    config/  market_rule/  product_selection_analysis.git/         project_structure.txt  run_init_structure.py      run_selection_analysis_multi_market_fixed.py  run_selection_analysis_v1.5.py
+README.md  input/   output/       product_selection_analysis_mirror.git/  push_flow.md           run_selection_analysis.py  run_selection_analysis_multi_market_v1.5.py   switch_to_main.sh*
+
+./config:
+archive/           market_rule_config.yaml     market_rule_config_TH.yaml  run_config.yaml            status_config.yaml  trend_keywords.txt           version_info.yaml
+future_roadmap.md  market_rule_config_ID.yaml  market_rules/               run_config_commented.yaml  trend_keywords/     trend_keywords_mapping.yaml
+
+./config/archive:
+
+./config/market_rules:
+market_rule_config_ID.csv  market_rule_config_TK.csv
+
+./config/trend_keywords:
+trend_keywords_ID.txt
+
+./input:
+raw_data_ID/  raw_data_TK/
+
+./input/raw_data_ID:
+'table_1 (1).csv'
+
+./input/raw_data_TK:
+'table_1 (1).csv'   'table_1 (11).csv'  'table_1 (2).csv'  'table_1 (4).csv'  'table_1 (6).csv'  'table_1 (8).csv'   table_1.csv
+'table_1 (10).csv'  'table_1 (12).csv'  'table_1 (3).csv'  'table_1 (5).csv'  'table_1 (7).csv'  'table_1 (9).csv'
+
+./market_rule:
+market_rule_config.yaml
+
+./output:
+priority_products.csv  priority_products_ID.csv  product_manage_ID/  product_manage_TK/  product_selection_analysis_result.xlsx  product_selection_results.xlsx  removed_rows.csv  selection_analysis.log
+
+./output/product_manage_ID:
+ 001_4556_JLTH00612880_正常备货_通货_儿童防晒喷雾/                                           099_2616_697JLYF006650_正常备货_自主品牌_LYDIMOON美白祛斑霜/
+ 002_5297_697JLYF006655_正常备货_自主品牌_LYDIMOON烟酰胺美白修复精华液/                      099_4361_697JLYF006641_正常备货_自主品牌_LYDIMOON素颜霜50g/
+ 003_5296_697JLYF006661_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱眼霜/                          100_4361_697JLYF006641_正常备货_自主品牌_LYDIMOON素颜霜50g/
+ 004_3162_JLTH00612855_正常备货_通货_皇家儿童防晒喷雾120ml/                                  100_4413_JLTH00612863_正常备货_通货_脱毛蜡纸20贴_10片_20贴_10片/
+ 005_4555_JLTH00612879_正常备货_通货_皇家婴童儿童防晒霜圆防晒SPF40PA+++/                     101_4384_JLTH00612869_正常备货_通货_IFAST黑灵芝洗发乳200ml/
+'006_6350_JLTH00612893_正常备货_通货_South Moon 草本身体护理喷雾30ml'/                       101_4413_JLTH00612863_正常备货_通货_脱毛蜡纸20贴_10片_20贴_10片/
+ 007_2973_JLTH00612840_正常备货_通货_胶肽硫精华液50ml_瓶/                                    102_3624_JLTH00612861_正常备货_通货_Sumifun维E脂肪粒乳20维E护肤净脂肪粒/
+ 008_2656_697JLYF006646_正常备货_自主品牌_LYDIMOON山羊奶美白沐浴露/                          102_4384_JLTH00612869_正常备货_通货_IFAST黑灵芝洗发乳200ml/
+'009_4387_JLTH00612868_正常备货_通货_澳芙雪377次抛嫩白祛斑精华液 1.5ml_10支_盒'/             103_3624_JLTH00612861_正常备货_通货_Sumifun维E脂肪粒乳20维E护肤净脂肪粒/
+ 010_4410_JLTH00612875_正常备货_通货_耿博士B5水杨酸面膜耿博士维生素原B5水杨酸净澈面膜/       103_997_697JLYF006604_正常备货_自主品牌_IUALLURE深海泥洁面奶/
+'011_3623_JLTH00612862_正常备货_通货_澳芙雪377嫩白祛斑精华液 30ml_瓶'/                       104_4412_JLTH00612872_正常备货_通货_脱毛喷雾+刮板/
+ 012_4552_JLTH00612884_正常备货_通货_明澄雅美白沐浴露300ml瓶/                                104_997_697JLYF006604_正常备货_自主品牌_IUALLURE深海泥洁面奶/
+ 013_3156_JLTH00612854_正常备货_通货_大头鸟婴幼儿口腔清洁喷雾草莓味-备护型/                  105_3041_JLTH00612837_清库存_通货_疣优肤平瘊子去尤点痣膏优肤平膏/
+ 014_2657_697JLYF006647_正常备货_自主品牌_LYDIMOON美白祛痘洗面奶/                            105_4412_JLTH00612872_正常备货_通货_脱毛喷雾+刮板/
+ 015_5292_697JLYF006663_正常备货_自主品牌_LYDIMOON视黄醇精华眼部精华液/                     '106_2841_JLTH00612829_清库存_通货_sumifun 速卖通跨境 淋巴保健膏10g'/
+ 016_5289_697JLYF006662_正常备货_自主品牌_LYDIMOON视黄醇精华柔滑眼霜/                        106_3041_JLTH00612837_清库存_通货_疣优肤平瘊子去尤点痣膏优肤平膏/
+ 017_5290_697JLYF006656_正常备货_自主品牌_LYDIMOON烟酰胺熊果苷身体乳/                       '107_2841_JLTH00612829_清库存_通货_sumifun 速卖通跨境 淋巴保健膏10g'/
+ 018_5519_697JLYF006660_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱修复身体乳/                    107_3042_JLTH00612839_清库存_通货_补骨脂白斑抑菌液豫宁美-白斑保健膏30g/
+ 019_5298_697JLYF006669_正常备货_自主品牌_LYDIMOON维生素E滋养柔软洁净磨砂膏/                 108_2840_JLTH00612828_清库存_通货_Sumifun跨境外贸溢脂性皮炎膏20g/
+ 020_4553_JLTH00612877_正常备货_通货_黄糖去角质凝胶150mL/                                    108_3042_JLTH00612839_清库存_通货_补骨脂白斑抑菌液豫宁美-白斑保健膏30g/
+ 021_5294_697JLYF006659_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱修复乳液/                      109_2840_JLTH00612828_清库存_通货_Sumifun跨境外贸溢脂性皮炎膏20g/
+ 022_5287_697JLYF006665_正常备货_自主品牌_LYDIMOON摩洛哥坚果油柔顺洁净洗发水/                109_3039_JLTH00612835_清库存_通货_肤康百草止痒膏乳膏30g肤康瓶装/
+ 023_6346_JLTH00612895_清库存_通货_白云山花城鼻通喷剂10ml_瓶/                                110_3039_JLTH00612835_清库存_通货_肤康百草止痒膏乳膏30g肤康瓶装/
+ 024_4547_JLTH00612881_正常备货_通货_韩美肌麦角硫因灵芝凝时抗皱霜/                           110_3040_JLTH00612836_清库存_通货_点痣膏20g/
+ 025_2541_697JLYF006642_正常备货_自主品牌_LYDIMOON牙齿美白凝胶笔/                            111_3040_JLTH00612836_清库存_通货_点痣膏20g/
+ 026_2652_JLTH00612826_正常备货_通货_凯琳雅叶绿素氨基酸细嫩洁面泥100g/                       111_996_697JLYF006605_正常备货_自主品牌_IUALLURE脱毛喷雾/
+ 027_2658_697JLYF006649_正常备货_自主品牌_LYDIMOON洁牙慕斯/                                  112_2972_JLTH00612838_清库存_通货_仙怀堂白癜膏20g/
+ 028_2490_JLTH00612818_正常备货_通货_指甲液30ml+锉刀+创可贴4张+棉签4根/                      112_996_697JLYF006605_正常备货_自主品牌_IUALLURE脱毛喷雾/
+ 028_6595_JLTH00612902_礼品_通货_形象美樱花芳香护手霜（新）30g/                              113_2972_JLTH00612838_清库存_通货_仙怀堂白癜膏20g/
+ 029_2490_JLTH00612818_正常备货_通货_指甲液30ml+锉刀+创可贴4张+棉签4根/                      113_3153_JLTH00612846_正常备货_通货_大头鸟儿童益生菌皓齿牙膏草莓味/
+ 029_2843_JLTH00612831_正常备货_通货_SADOER椰子沐浴露500ml/                                  114_3153_JLTH00612846_正常备货_通货_大头鸟儿童益生菌皓齿牙膏草莓味/
+ 030_2543_697JLYF006644_正常备货_自主品牌_LYDIMOON益生菌美白牙膏/                            114_3163_JLTH00612856_正常备货_通货_美度防脱育发洗发露500ml防脱洗发水/
+ 030_2843_JLTH00612831_正常备货_通货_SADOER椰子沐浴露500ml/                                 '115_2267_JLTH00612785_清库存_通货_湿疹瘙痒皮肤外用膏 20g'/
+ 031_2543_697JLYF006644_正常备货_自主品牌_LYDIMOON益生菌美白牙膏/                            115_3163_JLTH00612856_正常备货_通货_美度防脱育发洗发露500ml防脱洗发水/
+ 031_5295_697JLYF006654_正常备货_自主品牌_LYDIMOON乳糖酸修复精华液/                         '116_2267_JLTH00612785_清库存_通货_湿疹瘙痒皮肤外用膏 20g'/
+ 032_5288_697JLYF006668_正常备货_自主品牌_LYDIMOON竹炭撕拉式黑面膜/                          116_3152_JLTH00612845_正常备货_通货_大头鸟婴幼儿奥拉氟儿童牙膏蜜桃味/
+ 032_5295_697JLYF006654_正常备货_自主品牌_LYDIMOON乳糖酸修复精华液/                          117_3152_JLTH00612845_正常备货_通货_大头鸟婴幼儿奥拉氟儿童牙膏蜜桃味/
+ 033_2975_JLTH00612844_正常备货_通货_SOD蜜身体乳SOD蜜【100g】/                               117_3158_JLTH00612850_正常备货_通货_婴儿爽身粉玉米痱子粉140g婴童玉米爽身粉（紫色）/
+ 033_5288_697JLYF006668_正常备货_自主品牌_LYDIMOON竹炭撕拉式黑面膜/                          118_1445_697JLYF006625_清库存_自主品牌_佰氏除疤凝露/
+ 034_1068_JLTH00612730_正常备货_通货_德德维芙舒缓修护乳/                                     118_3158_JLTH00612850_正常备货_通货_婴儿爽身粉玉米痱子粉140g婴童玉米爽身粉（紫色）/
+ 034_2975_JLTH00612844_正常备货_通货_SOD蜜身体乳SOD蜜【100g】/                               119_1445_697JLYF006625_清库存_自主品牌_佰氏除疤凝露/
+ 035_1068_JLTH00612730_正常备货_通货_德德维芙舒缓修护乳/                                     119_1518_697JLYF006630_正常备货_自主品牌_IUallure防脱育发液/
+ 035_4551_JLTH00612886_清库存_通货_毛囊焱炎药膏广雅毛囊宁保健膏1瓶/                          120_1518_697JLYF006630_正常备货_自主品牌_IUallure防脱育发液/
+ 036_1444_697JLYF006618_正常备货_自主品牌_佰氏珍珠洗牙粉-50g/                                120_2259_JLTH00612786_清库存_通货_灸之恋脂肪膏乳白色30g_盒/
+ 036_4551_JLTH00612886_清库存_通货_毛囊焱炎药膏广雅毛囊宁保健膏1瓶/                          121_1520_697JLYF006632_正常备货_自主品牌_LYDIMOON睫毛液滋养液/
+ 037_1444_697JLYF006618_正常备货_自主品牌_佰氏珍珠洗牙粉-50g/                                121_2259_JLTH00612786_清库存_通货_灸之恋脂肪膏乳白色30g_盒/
+ 037_5518_697JLYF006653_正常备货_自主品牌_LYDIMOON去咖啡茶渍美白牙膏/                        122_1520_697JLYF006632_正常备货_自主品牌_LYDIMOON睫毛液滋养液/
+ 038_4409_JLTH00612871_正常备货_通货_益生菌牙膏【百香果120g】酵素焕白牙膏/                   122_2649_JLTH00612823_清库存_通货_痛风膏35g_盒/
+ 038_5518_697JLYF006653_正常备货_自主品牌_LYDIMOON去咖啡茶渍美白牙膏/                        123_2649_JLTH00612823_清库存_通货_痛风膏35g_盒/
+ 039_1403_697JLYF006619_正常备货_自主品牌_IUALLURE祛痘凝胶精华/                              123_2755_697JLYF006651_正常备货_自主品牌_LYDIMOON角蛋白发膜/
+ 039_4409_JLTH00612871_正常备货_通货_益生菌牙膏【百香果120g】酵素焕白牙膏/                   124_1515_697JLYF006627_清库存_自主品牌_LYDIMOON中药肚脐贴/
+ 040_1403_697JLYF006619_正常备货_自主品牌_IUALLURE祛痘凝胶精华/                              124_2544_697JLYF006645_自由定价_自主品牌_LYDIMOON益生菌漱口水/
+ 040_4414_JLTH00612866_正常备货_通货_韩瑟皮傲宁胶态硫祛痘霜30g/                              124_2755_697JLYF006651_正常备货_自主品牌_LYDIMOON角蛋白发膜/
+ 041_4414_JLTH00612866_正常备货_通货_韩瑟皮傲宁胶态硫祛痘霜30g/                              125_1515_697JLYF006627_清库存_自主品牌_LYDIMOON中药肚脐贴/
+'041_7253_JLTH00612913 新品_正常备货_通货_抗皱眼部精华油10ml'/                               125_2755_697JLYF006651_正常备货_自主品牌_LYDIMOON角蛋白发膜/
+ 042_4386_JLTH00612867_正常备货_通货_Nicor维生素E尿素霜100g/                                 125_3154_JLTH00612847_正常备货_通货_大头鸟溶菌酶儿童健齿牙膏溶菌酶牙膏200g/
+'042_7253_JLTH00612913 新品_正常备货_通货_抗皱眼部精华油10ml'/                               126_1515_697JLYF006627_清库存_自主品牌_LYDIMOON中药肚脐贴/
+ 043_4386_JLTH00612867_正常备货_通货_Nicor维生素E尿素霜100g/                                 126_1516_697JLYF006628_正常备货_自主品牌_LYDIMOON彩盒肚脐贴/
+'043_5514_697JLYF006666_正常备货_自主品牌_LYDIMOON维生素 E 滋养身体乳'/                      126_3154_JLTH00612847_正常备货_通货_大头鸟溶菌酶儿童健齿牙膏溶菌酶牙膏200g/
+'044_5514_697JLYF006666_正常备货_自主品牌_LYDIMOON维生素 E 滋养身体乳'/                      127_1516_697JLYF006628_正常备货_自主品牌_LYDIMOON彩盒肚脐贴/
+'044_5515_697JLYF006667_正常备货_自主品牌_LYDIMOON维生素 E 滋养滋润霜'/                      127_2489_JLTH00612817_清库存_通货_翼颜水杨酸毛孔细致霜30g/
+ 045_4415_JLTH00612870_正常备货_通货_SOD蜜身体乳SOD蜜【300g】/                               127_3154_JLTH00612847_正常备货_通货_大头鸟溶菌酶儿童健齿牙膏溶菌酶牙膏200g/
+'045_5515_697JLYF006667_正常备货_自主品牌_LYDIMOON维生素 E 滋养滋润霜'/                      128_1516_697JLYF006628_正常备货_自主品牌_LYDIMOON彩盒肚脐贴/
+ 046_4415_JLTH00612870_正常备货_通货_SOD蜜身体乳SOD蜜【300g】/                               128_2488_JLTH00612816_清库存_通货_翼颜15%壬二酸净颜凝露30g/
+'046_7257_JLTH00612914 新品_清库存_通货_脚爽喷剂30ml'/                                       128_2489_JLTH00612817_清库存_通货_翼颜水杨酸毛孔细致霜30g/
+ 047_6352_JLTH00612894_清库存_通货_咽扁舒冷肤凝胶/                                           129_2488_JLTH00612816_清库存_通货_翼颜15%壬二酸净颜凝露30g/
+'047_7257_JLTH00612914 新品_清库存_通货_脚爽喷剂30ml'/                                       129_2489_JLTH00612817_清库存_通货_翼颜水杨酸毛孔细致霜30g/
+ 048_6352_JLTH00612894_清库存_通货_咽扁舒冷肤凝胶/                                           129_3159_JLTH00612851_正常备货_通货_婴儿氨基酸身体乳130ml开咪猫婴童舒柔保湿润肤露紫色/
+ 048_6940_697JLYF006676_清库存_自主品牌_脂肪膏/                                              130_2333_JLTH00612799_清库存_通货_梵飞丝维A醇精华液30ml/
+ 049_6566_JLTH00612900_清库存_通货_曲张冷肤凝胶20g/                                          130_2488_JLTH00612816_清库存_通货_翼颜15%壬二酸净颜凝露30g/
+ 049_6940_697JLYF006676_清库存_自主品牌_脂肪膏/                                              130_3159_JLTH00612851_正常备货_通货_婴儿氨基酸身体乳130ml开咪猫婴童舒柔保湿润肤露紫色/
+ 050_1443_697JLYF006609_正常备货_自主品牌_IUALLURE祛痘沐浴乳/                                131_2332_JLTH00612798_清库存_通货_梵飞丝VC凝颜精华液30ml/
+ 050_6566_JLTH00612900_清库存_通货_曲张冷肤凝胶20g/                                          131_2333_JLTH00612799_清库存_通货_梵飞丝维A醇精华液30ml/
+ 051_1443_697JLYF006609_正常备货_自主品牌_IUALLURE祛痘沐浴乳/                                131_3159_JLTH00612851_正常备货_通货_婴儿氨基酸身体乳130ml开咪猫婴童舒柔保湿润肤露紫色/
+ 051_6941_697JLYF006679_正常备货_自主品牌_瘦胳膊膏/                                          132_1400_697JLYF006610_清库存_自主品牌_IUALLURE脱毛膏/
+ 052_6941_697JLYF006679_正常备货_自主品牌_瘦胳膊膏/                                          132_2332_JLTH00612798_清库存_通货_梵飞丝VC凝颜精华液30ml/
+'052_7254_JLTH00612908 新品_清库存_通货_儿童祛痱止痒膏'/                                     132_2333_JLTH00612799_清库存_通货_梵飞丝维A醇精华液30ml/
+ 053_6945_697JLYF006683紧致_正常备货_自主品牌_妊娠纹膏/                                      133_1400_697JLYF006610_清库存_自主品牌_IUALLURE脱毛膏/
+'053_7254_JLTH00612908 新品_清库存_通货_儿童祛痱止痒膏'/                                     133_1404_697JLYF006622_正常备货_自主品牌_IUALLURE纤体塑形霜/
+ 054_6945_697JLYF006683紧致_正常备货_自主品牌_妊娠纹膏/                                      133_2332_JLTH00612798_清库存_通货_梵飞丝VC凝颜精华液30ml/
+'054_7252_JLTH00612915 新品_正常备货_通货_日本再生硅口腔抑菌牙膏 gleiser再生硅-100克'/       134_1400_697JLYF006610_清库存_自主品牌_IUALLURE脱毛膏/
+ 055_6565_JLTH00612899_清库存_通货_正泰林日文抑菌止痒膏20g/                                  134_1404_697JLYF006622_正常备货_自主品牌_IUALLURE纤体塑形霜/
+'055_7252_JLTH00612915 新品_正常备货_通货_日本再生硅口腔抑菌牙膏 gleiser再生硅-100克'/       134_397_JLTH00612703_正常备货_通货_赋活肌密保湿眼霜20g/
+ 056_6565_JLTH00612899_清库存_通货_正泰林日文抑菌止痒膏20g/                                  135_1404_697JLYF006622_正常备货_自主品牌_IUALLURE纤体塑形霜/
+ 056_6942_697JLYF006680_清库存_自主品牌_去疣膏/                                              135_2327_JLTH00612805_正常备货_通货_芙芊姿魅体精华沐浴露330ml/
+ 057_6942_697JLYF006680_清库存_自主品牌_去疣膏/                                              135_397_JLTH00612703_正常备货_通货_赋活肌密保湿眼霜20g/
+'057_7256_JLTH00612912 新品_正常备货_通货_薄荷口腔喷雾10ml（新）'/                           136_2327_JLTH00612805_正常备货_通货_芙芊姿魅体精华沐浴露330ml/
+ 058_6944_697JLYF006682_清库存_自主品牌_褥疮膏/                                              136_2839_JLTH00612834_正常备货_通货_眼部护理液清洁眼部洗眼液200ml/
+'058_7256_JLTH00612912 新品_正常备货_通货_薄荷口腔喷雾10ml（新）'/                           136_397_JLTH00612703_正常备货_通货_赋活肌密保湿眼霜20g/
+ 059_6944_697JLYF006682_清库存_自主品牌_褥疮膏/                                              137_2327_JLTH00612805_正常备货_通货_芙芊姿魅体精华沐浴露330ml/
+'059_7259_JLTH00612906 新品_正常备货_通货_日本益生菌亮白牙粉'/                               137_2839_JLTH00612834_正常备货_通货_眼部护理液清洁眼部洗眼液200ml/
+ 060_6943_697JLYF006681_清库存_自主品牌_硫磺膏/                                              137_995_697JLYF006606_正常备货_自主品牌_IUALLURE生姜洗发水/
+'060_7259_JLTH00612906 新品_正常备货_通货_日本益生菌亮白牙粉'/                               138_2839_JLTH00612834_正常备货_通货_眼部护理液清洁眼部洗眼液200ml/
+'061_4548_JLTH00612882_正常备货_通货_OUHOE 身体焕白霜100g'/                                  138_3155_JLTH00612848_正常备货_通货_大头鸟儿童清爽洁净洗发沐浴露1000ml/
+ 061_6943_697JLYF006681_清库存_自主品牌_硫磺膏/                                              138_995_697JLYF006606_正常备货_自主品牌_IUALLURE生姜洗发水/
+'062_4548_JLTH00612882_正常备货_通货_OUHOE 身体焕白霜100g'/                                  139_1346_JLTH00612764_清库存_通货_色娜娜竹炭吸黑头膏60g/
+ 062_6939_697JLYF006677_清库存_自主品牌_甲状康膏/                                            139_3155_JLTH00612848_正常备货_通货_大头鸟儿童清爽洁净洗发沐浴露1000ml/
+'063_3622_JLTH00612860_正常备货_通货_澳芙雪377美白祛斑面霜 50g_瓶'/                          139_995_697JLYF006606_正常备货_自主品牌_IUALLURE生姜洗发水/
+ 063_6939_697JLYF006677_清库存_自主品牌_甲状康膏/                                            140_1346_JLTH00612764_清库存_通货_色娜娜竹炭吸黑头膏60g/
+'064_3622_JLTH00612860_正常备货_通货_澳芙雪377美白祛斑面霜 50g_瓶'/                          140_1519_697JLYF006631_正常备货_自主品牌_IUallure足部按摩精油/
+ 064_6348_JLTH00612896_正常备货_通货_【蓝莓叶黄素】眼部护理液12ml/                           140_3155_JLTH00612848_正常备货_通货_大头鸟儿童清爽洁净洗发沐浴露1000ml/
+ 065_6348_JLTH00612896_正常备货_通货_【蓝莓叶黄素】眼部护理液12ml/                           141_1346_JLTH00612764_清库存_通货_色娜娜竹炭吸黑头膏60g/
+ 065_6938_697JLYF006678_清库存_自主品牌_白斑净膏/                                            141_1519_697JLYF006631_正常备货_自主品牌_IUallure足部按摩精油/
+ 066_2615_697JLYF006648_正常备货_自主品牌_LYDIMOON晚安冻膜/                                  141_2261_JLTH00612789_清库存_通货_九福堂优肤平抑菌液10/
+ 066_6938_697JLYF006678_清库存_自主品牌_白斑净膏/                                            142_1519_697JLYF006631_正常备货_自主品牌_IUallure足部按摩精油/
+ 067_2615_697JLYF006648_正常备货_自主品牌_LYDIMOON晚安冻膜/                                  142_2261_JLTH00612789_清库存_通货_九福堂优肤平抑菌液10/
+'067_7251_JLTH00612911 新品_正常备货_通货_柠檬去角质啫喱100ml'/                              142_968_JL1284333_清库存_通货_中药肚脐贴/
+'068_7250_JLTH00612910 新品_正常备货_通货_二硫化硒去屑洗发水'/                               143_2261_JLTH00612789_清库存_通货_九福堂优肤平抑菌液10/
+'068_7251_JLTH00612911 新品_正常备货_通货_柠檬去角质啫喱100ml'/                              143_384_JLTH00612690_正常备货_通货_胸部护理霜80G/
+ 069_326_JLTH00612642_正常备货_通货_乳木果磨砂膏250g/                                        143_968_JL1284333_清库存_通货_中药肚脐贴/
+'069_7250_JLTH00612910 新品_正常备货_通货_二硫化硒去屑洗发水'/                               144_1521_697JLYF006633_正常备货_自主品牌_IUALLURE美乳丰胸/
+ 070_326_JLTH00612642_正常备货_通货_乳木果磨砂膏250g/                                        144_384_JLTH00612690_正常备货_通货_胸部护理霜80G/
+'070_7255_JLTH00612909 新品_清库存_通货_坂枝野寻足跟痛外用药贴'/                             144_968_JL1284333_清库存_通货_中药肚脐贴/
+'071_6660_JLTH00612905_正常备货_自主品牌_FrstBaby BABY HAIR LOTION   （护理生发液）_30ml'/   145_1405_697JLYF006608_正常备货_自主品牌_IUALLURE脱毛慕斯/
+'071_7255_JLTH00612909 新品_清库存_通货_坂枝野寻足跟痛外用药贴'/                             145_1521_697JLYF006633_正常备货_自主品牌_IUALLURE美乳丰胸/
+'072_6660_JLTH00612905_正常备货_自主品牌_FrstBaby BABY HAIR LOTION   （护理生发液）_30ml'/   145_384_JLTH00612690_正常备货_通货_胸部护理霜80G/
+ 072_6868_697JLYF006674_正常备货_自主品牌_LYDIMOON植物舒缓精华乳/                            146_1286_697JLYF006611_正常备货_自主品牌_IUALLURE美乳霜/
+ 073_6351_JLTH00612897_正常备货_通货_伊喜畅5%碳酸氢钠溶液外阴清洗液250ml_瓶/                 146_1405_697JLYF006608_正常备货_自主品牌_IUALLURE脱毛慕斯/
+ 073_6868_697JLYF006674_正常备货_自主品牌_LYDIMOON植物舒缓精华乳/                            146_1521_697JLYF006633_正常备货_自主品牌_IUALLURE美乳丰胸/
+ 074_6351_JLTH00612897_正常备货_通货_伊喜畅5%碳酸氢钠溶液外阴清洗液250ml_瓶/                 147_1286_697JLYF006611_正常备货_自主品牌_IUALLURE美乳霜/
+'074_6594_JLTH00612904_正常备货_通货_染发剂 栗棕色230ml'/                                    147_1405_697JLYF006608_正常备货_自主品牌_IUALLURE脱毛慕斯/
+'075_6593_JLTH00612903_正常备货_通货_染发剂 自然黑色230ml'/                                  147_2335_JLTH00612812_清库存_通货_小分子熬夜急救精华露30ml/
+'075_6594_JLTH00612904_正常备货_通货_染发剂 栗棕色230ml'/                                    148_1286_697JLYF006611_正常备货_自主品牌_IUALLURE美乳霜/
+'076_2974_JLTH00612843_正常备货_通货_额头贴抬头纹额头贴 一盒（10片）'/                       148_2335_JLTH00612812_清库存_通货_小分子熬夜急救精华露30ml/
+'076_6593_JLTH00612903_正常备货_通货_染发剂 自然黑色230ml'/                                  148_565_JLTH00612649_正常备货_通货_控油去屑洗发水500ML/
+'077_2974_JLTH00612843_正常备货_通货_额头贴抬头纹额头贴 一盒（10片）'/                       149_1067_JLTH00612729_正常备货_通货_德德维芙老款瓶装脱毛膏/
+ 077_3621_JLTH00612859_清库存_通货_hih植萃焕颜舒缓花瓣水/                                    149_2335_JLTH00612812_清库存_通货_小分子熬夜急救精华露30ml/
+ 078_3621_JLTH00612859_清库存_通货_hih植萃焕颜舒缓花瓣水/                                    149_565_JLTH00612649_正常备货_通货_控油去屑洗发水500ML/
+'078_6349_JLTH00612890_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_15cm 1片_袋'/         150_1067_JLTH00612729_正常备货_通货_德德维芙老款瓶装脱毛膏/
+ 079_1401_697JLYF006614_正常备货_自主品牌_IUALLURE草本精华眼霜/                              150_2264_JLTH00612793_正常备货_通货_婴童牛奶洗发沐浴露260ml/
+'079_6349_JLTH00612890_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_15cm 1片_袋'/         150_565_JLTH00612649_正常备货_通货_控油去屑洗发水500ML/
+ 080_1401_697JLYF006614_正常备货_自主品牌_IUALLURE草本精华眼霜/                              151_1067_JLTH00612729_正常备货_通货_德德维芙老款瓶装脱毛膏/
+'080_7258_JLTH00612907 新品_正常备货_通货_SADOER硫磺除螨沐浴露500ml'/                        151_2264_JLTH00612793_正常备货_通货_婴童牛奶洗发沐浴露260ml/
+ 081_6867_697JLYF006673_正常备货_自主品牌_LYDIMOON幽夹舒柔脱毛膏100g/                        151_314_JLTH00612603_正常备货_通货_芙迪男士脱毛膏/
+'081_7258_JLTH00612907 新品_正常备货_通货_SADOER硫磺除螨沐浴露500ml'/                        152_1351_JLTH00612771_清库存_通货_免洗头发喷雾150ml/
+'082_6347_JLTH00612891_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_50cm 1卷_盒'/         152_2264_JLTH00612793_正常备货_通货_婴童牛奶洗发沐浴露260ml/
+ 082_6867_697JLYF006673_正常备货_自主品牌_LYDIMOON幽夹舒柔脱毛膏100g/                        152_314_JLTH00612603_正常备货_通货_芙迪男士脱毛膏/
+ 083_3157_JLTH00612849_正常备货_通货_儿童面霜50g开咪猫润肤霜（黄色）/                        153_1351_JLTH00612771_清库存_通货_免洗头发喷雾150ml/
+'083_6347_JLTH00612891_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_50cm 1卷_盒'/         153_1353_JLTH00612774_清库存_通货_亚玛丽小苏打亮白牙膏210g/
+ 084_3157_JLTH00612849_正常备货_通货_儿童面霜50g开咪猫润肤霜（黄色）/                        153_314_JLTH00612603_正常备货_通货_芙迪男士脱毛膏/
+ 084_4549_JLTH00612883_清库存_通货_脂肪康保健膏30g/                                          154_1029_JLTH00612711_清库存_通货_伊露莹洗发水500ml/
+ 085_4549_JLTH00612883_清库存_通货_脂肪康保健膏30g/                                          154_1351_JLTH00612771_清库存_通货_免洗头发喷雾150ml/
+ 085_4550_JLTH00612885_清库存_通货_疣尤优肤平液广雅优肤平膏1盒/                              154_1353_JLTH00612774_清库存_通货_亚玛丽小苏打亮白牙膏210g/
+ 086_2486_JLTH00612814_正常备货_通货_臻羞抚痕平滑精华霜50g/                                  155_1029_JLTH00612711_清库存_通货_伊露莹洗发水500ml/
+ 086_4550_JLTH00612885_清库存_通货_疣尤优肤平液广雅优肤平膏1盒/                              155_1353_JLTH00612774_清库存_通货_亚玛丽小苏打亮白牙膏210g/
+ 087_2486_JLTH00612814_正常备货_通货_臻羞抚痕平滑精华霜50g/                                  155_2336_JLTH00612811_清库存_通货_O-ZONE_欧志姆香草薄荷牙膏100g/
+'087_5516_697JLYF006670_正常备货_自主品牌_LYDIMOON维 C 美白皂'/                              156_1029_JLTH00612711_清库存_通货_伊露莹洗发水500ml/
+'088_5516_697JLYF006670_正常备货_自主品牌_LYDIMOON维 C 美白皂'/                              156_2336_JLTH00612811_清库存_通货_O-ZONE_欧志姆香草薄荷牙膏100g/
+ 088_6333_JLTH00612892_正常备货_通货_奶瓶果蔬清洗剂【袋装4ml_20条】/                         156_2655_JLTH00612822_清库存_通货_静脉型曲张膏冷敷凝胶20g一支/
+ 089_5517_697JLYF006652_正常备货_自主品牌_LYDIMOON去烟渍美白牙膏/                            157_1147_JLTH00612756_清库存_通货_aichun美乳霜/
+ 089_6333_JLTH00612892_正常备货_通货_奶瓶果蔬清洗剂【袋装4ml_20条】/                         157_2336_JLTH00612811_清库存_通货_O-ZONE_欧志姆香草薄荷牙膏100g/
+ 090_2542_697JLYF006643_正常备货_自主品牌_LYDIMOON美白干性牙贴（7对装）/                     157_2655_JLTH00612822_清库存_通货_静脉型曲张膏冷敷凝胶20g一支/
+ 090_5517_697JLYF006652_正常备货_自主品牌_LYDIMOON去烟渍美白牙膏/                            158_1147_JLTH00612756_清库存_通货_aichun美乳霜/
+ 091_2542_697JLYF006643_正常备货_自主品牌_LYDIMOON美白干性牙贴（7对装）/                     158_1340_JLTH00612776_清库存_通货_爱臣美鼻养护精华油10ml/
+'091_5291_697JLYF006671_正常备货_自主品牌_LYDIMOON维 C 美白霜'/                              158_2655_JLTH00612822_清库存_通货_静脉型曲张膏冷敷凝胶20g一支/
+ 092_4554_JLTH00612878_正常备货_通货_【利贝婴儿】倍护防皴霜50g（补水锁水，倍润防皴）/        159_1147_JLTH00612756_清库存_通货_aichun美乳霜/
+'092_5291_697JLYF006671_正常备货_自主品牌_LYDIMOON维 C 美白霜'/                              159_1340_JLTH00612776_清库存_通货_爱臣美鼻养护精华油10ml/
+ 093_4554_JLTH00612878_正常备货_通货_【利贝婴儿】倍护防皴霜50g（补水锁水，倍润防皴）/        160_315_JLY014287900003_自由定价_通货_韩婵深海泥/
+ 093_5293_697JLYF006664_正常备货_自主品牌_LYDIMOON摩洛哥坚果油柔顺护发素/                    160_6328_JLTH00612889_礼品_饰品类_可爱卡通洞洞鞋鞋花套装随机款式混（6个一卡）/
+ 094_1402_697JLYF006616_正常备货_自主品牌_IUALLURE腋窝美白霜/                                161_1023_JLTH00612706_自由定价_通货_色娜娜六胜肽抗皱面霜/
+ 094_5293_697JLYF006664_正常备货_自主品牌_LYDIMOON摩洛哥坚果油柔顺护发素/                    161_2756_JLTH00612827_礼品_通货_韩纪薰衣草香型香皂108g/
+ 095_1402_697JLYF006616_正常备货_自主品牌_IUALLURE腋窝美白霜/                                162_1340_JLTH00612776_清库存_通货_爱臣美鼻养护精华油10ml/
+ 095_4411_JLTH00612864_正常备货_通货_脱毛套装【60g+30g】带刮板/                              162_2480_697JLYF006612_礼品_自主品牌_LYDIMOON芦荟胶/
+ 096_4411_JLTH00612864_正常备货_通货_脱毛套装【60g+30g】带刮板/                              163_1056_JLTH00612736_自由定价_通货_黑头清洁面膜80g/
+ 096_6345_JLTH00612898_正常备货_通货_为一生洗眼液洗眼液180ML/                                164_1034_JLTH00612713_自由定价_通货_玖美堂奢护顺滑焗油发膜/
+'097_3619_JLTH00612857_正常备货_通货_BIOAOUA芦荟温和脱毛膏 60g'/                             165_6328_JLTH00612889_礼品_饰品类_可爱卡通洞洞鞋鞋花套装随机款式混（6个一卡）/
+ 097_6345_JLTH00612898_正常备货_通货_为一生洗眼液洗眼液180ML/                                166_2756_JLTH00612827_礼品_通货_韩纪薰衣草香型香皂108g/
+ 098_2616_697JLYF006650_正常备货_自主品牌_LYDIMOON美白祛斑霜/                                167_2480_697JLYF006612_礼品_自主品牌_LYDIMOON芦荟胶/
+'098_3619_JLTH00612857_正常备货_通货_BIOAOUA芦荟温和脱毛膏 60g'/
+
+./output/product_manage_ID/001_4556_JLTH00612880_正常备货_通货_儿童防晒喷雾:
+
+./output/product_manage_ID/002_5297_697JLYF006655_正常备货_自主品牌_LYDIMOON烟酰胺美白修复精华液:
+
+./output/product_manage_ID/003_5296_697JLYF006661_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱眼霜:
+
+./output/product_manage_ID/004_3162_JLTH00612855_正常备货_通货_皇家儿童防晒喷雾120ml:
+
+./output/product_manage_ID/005_4555_JLTH00612879_正常备货_通货_皇家婴童儿童防晒霜圆防晒SPF40PA+++:
+
+'./output/product_manage_ID/006_6350_JLTH00612893_正常备货_通货_South Moon 草本身体护理喷雾30ml':
+
+./output/product_manage_ID/007_2973_JLTH00612840_正常备货_通货_胶肽硫精华液50ml_瓶:
+
+./output/product_manage_ID/008_2656_697JLYF006646_正常备货_自主品牌_LYDIMOON山羊奶美白沐浴露:
+
+'./output/product_manage_ID/009_4387_JLTH00612868_正常备货_通货_澳芙雪377次抛嫩白祛斑精华液 1.5ml_10支_盒':
+
+./output/product_manage_ID/010_4410_JLTH00612875_正常备货_通货_耿博士B5水杨酸面膜耿博士维生素原B5水杨酸净澈面膜:
+
+'./output/product_manage_ID/011_3623_JLTH00612862_正常备货_通货_澳芙雪377嫩白祛斑精华液 30ml_瓶':
+
+./output/product_manage_ID/012_4552_JLTH00612884_正常备货_通货_明澄雅美白沐浴露300ml瓶:
+
+./output/product_manage_ID/013_3156_JLTH00612854_正常备货_通货_大头鸟婴幼儿口腔清洁喷雾草莓味-备护型:
+
+./output/product_manage_ID/014_2657_697JLYF006647_正常备货_自主品牌_LYDIMOON美白祛痘洗面奶:
+
+./output/product_manage_ID/015_5292_697JLYF006663_正常备货_自主品牌_LYDIMOON视黄醇精华眼部精华液:
+
+./output/product_manage_ID/016_5289_697JLYF006662_正常备货_自主品牌_LYDIMOON视黄醇精华柔滑眼霜:
+
+./output/product_manage_ID/017_5290_697JLYF006656_正常备货_自主品牌_LYDIMOON烟酰胺熊果苷身体乳:
+
+./output/product_manage_ID/018_5519_697JLYF006660_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱修复身体乳:
+
+./output/product_manage_ID/019_5298_697JLYF006669_正常备货_自主品牌_LYDIMOON维生素E滋养柔软洁净磨砂膏:
+
+./output/product_manage_ID/020_4553_JLTH00612877_正常备货_通货_黄糖去角质凝胶150mL:
+
+./output/product_manage_ID/021_5294_697JLYF006659_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱修复乳液:
+
+./output/product_manage_ID/022_5287_697JLYF006665_正常备货_自主品牌_LYDIMOON摩洛哥坚果油柔顺洁净洗发水:
+
+./output/product_manage_ID/023_6346_JLTH00612895_清库存_通货_白云山花城鼻通喷剂10ml_瓶:
+
+./output/product_manage_ID/024_4547_JLTH00612881_正常备货_通货_韩美肌麦角硫因灵芝凝时抗皱霜:
+
+./output/product_manage_ID/025_2541_697JLYF006642_正常备货_自主品牌_LYDIMOON牙齿美白凝胶笔:
+
+./output/product_manage_ID/026_2652_JLTH00612826_正常备货_通货_凯琳雅叶绿素氨基酸细嫩洁面泥100g:
+
+./output/product_manage_ID/027_2658_697JLYF006649_正常备货_自主品牌_LYDIMOON洁牙慕斯:
+
+./output/product_manage_ID/028_2490_JLTH00612818_正常备货_通货_指甲液30ml+锉刀+创可贴4张+棉签4根:
+
+./output/product_manage_ID/028_6595_JLTH00612902_礼品_通货_形象美樱花芳香护手霜（新）30g:
+
+./output/product_manage_ID/029_2490_JLTH00612818_正常备货_通货_指甲液30ml+锉刀+创可贴4张+棉签4根:
+
+./output/product_manage_ID/029_2843_JLTH00612831_正常备货_通货_SADOER椰子沐浴露500ml:
+
+./output/product_manage_ID/030_2543_697JLYF006644_正常备货_自主品牌_LYDIMOON益生菌美白牙膏:
+
+./output/product_manage_ID/030_2843_JLTH00612831_正常备货_通货_SADOER椰子沐浴露500ml:
+
+./output/product_manage_ID/031_2543_697JLYF006644_正常备货_自主品牌_LYDIMOON益生菌美白牙膏:
+
+./output/product_manage_ID/031_5295_697JLYF006654_正常备货_自主品牌_LYDIMOON乳糖酸修复精华液:
+
+./output/product_manage_ID/032_5288_697JLYF006668_正常备货_自主品牌_LYDIMOON竹炭撕拉式黑面膜:
+
+./output/product_manage_ID/032_5295_697JLYF006654_正常备货_自主品牌_LYDIMOON乳糖酸修复精华液:
+
+./output/product_manage_ID/033_2975_JLTH00612844_正常备货_通货_SOD蜜身体乳SOD蜜【100g】:
+
+./output/product_manage_ID/033_5288_697JLYF006668_正常备货_自主品牌_LYDIMOON竹炭撕拉式黑面膜:
+
+./output/product_manage_ID/034_1068_JLTH00612730_正常备货_通货_德德维芙舒缓修护乳:
+
+./output/product_manage_ID/034_2975_JLTH00612844_正常备货_通货_SOD蜜身体乳SOD蜜【100g】:
+
+./output/product_manage_ID/035_1068_JLTH00612730_正常备货_通货_德德维芙舒缓修护乳:
+
+./output/product_manage_ID/035_4551_JLTH00612886_清库存_通货_毛囊焱炎药膏广雅毛囊宁保健膏1瓶:
+
+./output/product_manage_ID/036_1444_697JLYF006618_正常备货_自主品牌_佰氏珍珠洗牙粉-50g:
+
+./output/product_manage_ID/036_4551_JLTH00612886_清库存_通货_毛囊焱炎药膏广雅毛囊宁保健膏1瓶:
+
+./output/product_manage_ID/037_1444_697JLYF006618_正常备货_自主品牌_佰氏珍珠洗牙粉-50g:
+
+./output/product_manage_ID/037_5518_697JLYF006653_正常备货_自主品牌_LYDIMOON去咖啡茶渍美白牙膏:
+
+./output/product_manage_ID/038_4409_JLTH00612871_正常备货_通货_益生菌牙膏【百香果120g】酵素焕白牙膏:
+
+./output/product_manage_ID/038_5518_697JLYF006653_正常备货_自主品牌_LYDIMOON去咖啡茶渍美白牙膏:
+
+./output/product_manage_ID/039_1403_697JLYF006619_正常备货_自主品牌_IUALLURE祛痘凝胶精华:
+
+./output/product_manage_ID/039_4409_JLTH00612871_正常备货_通货_益生菌牙膏【百香果120g】酵素焕白牙膏:
+
+./output/product_manage_ID/040_1403_697JLYF006619_正常备货_自主品牌_IUALLURE祛痘凝胶精华:
+
+./output/product_manage_ID/040_4414_JLTH00612866_正常备货_通货_韩瑟皮傲宁胶态硫祛痘霜30g:
+
+./output/product_manage_ID/041_4414_JLTH00612866_正常备货_通货_韩瑟皮傲宁胶态硫祛痘霜30g:
+
+'./output/product_manage_ID/041_7253_JLTH00612913 新品_正常备货_通货_抗皱眼部精华油10ml':
+
+./output/product_manage_ID/042_4386_JLTH00612867_正常备货_通货_Nicor维生素E尿素霜100g:
+
+'./output/product_manage_ID/042_7253_JLTH00612913 新品_正常备货_通货_抗皱眼部精华油10ml':
+
+./output/product_manage_ID/043_4386_JLTH00612867_正常备货_通货_Nicor维生素E尿素霜100g:
+
+'./output/product_manage_ID/043_5514_697JLYF006666_正常备货_自主品牌_LYDIMOON维生素 E 滋养身体乳':
+
+'./output/product_manage_ID/044_5514_697JLYF006666_正常备货_自主品牌_LYDIMOON维生素 E 滋养身体乳':
+
+'./output/product_manage_ID/044_5515_697JLYF006667_正常备货_自主品牌_LYDIMOON维生素 E 滋养滋润霜':
+
+./output/product_manage_ID/045_4415_JLTH00612870_正常备货_通货_SOD蜜身体乳SOD蜜【300g】:
+
+'./output/product_manage_ID/045_5515_697JLYF006667_正常备货_自主品牌_LYDIMOON维生素 E 滋养滋润霜':
+
+./output/product_manage_ID/046_4415_JLTH00612870_正常备货_通货_SOD蜜身体乳SOD蜜【300g】:
+
+'./output/product_manage_ID/046_7257_JLTH00612914 新品_清库存_通货_脚爽喷剂30ml':
+
+./output/product_manage_ID/047_6352_JLTH00612894_清库存_通货_咽扁舒冷肤凝胶:
+
+'./output/product_manage_ID/047_7257_JLTH00612914 新品_清库存_通货_脚爽喷剂30ml':
+
+./output/product_manage_ID/048_6352_JLTH00612894_清库存_通货_咽扁舒冷肤凝胶:
+
+./output/product_manage_ID/048_6940_697JLYF006676_清库存_自主品牌_脂肪膏:
+
+./output/product_manage_ID/049_6566_JLTH00612900_清库存_通货_曲张冷肤凝胶20g:
+
+./output/product_manage_ID/049_6940_697JLYF006676_清库存_自主品牌_脂肪膏:
+
+./output/product_manage_ID/050_1443_697JLYF006609_正常备货_自主品牌_IUALLURE祛痘沐浴乳:
+
+./output/product_manage_ID/050_6566_JLTH00612900_清库存_通货_曲张冷肤凝胶20g:
+
+./output/product_manage_ID/051_1443_697JLYF006609_正常备货_自主品牌_IUALLURE祛痘沐浴乳:
+
+./output/product_manage_ID/051_6941_697JLYF006679_正常备货_自主品牌_瘦胳膊膏:
+
+./output/product_manage_ID/052_6941_697JLYF006679_正常备货_自主品牌_瘦胳膊膏:
+
+'./output/product_manage_ID/052_7254_JLTH00612908 新品_清库存_通货_儿童祛痱止痒膏':
+
+./output/product_manage_ID/053_6945_697JLYF006683紧致_正常备货_自主品牌_妊娠纹膏:
+
+'./output/product_manage_ID/053_7254_JLTH00612908 新品_清库存_通货_儿童祛痱止痒膏':
+
+./output/product_manage_ID/054_6945_697JLYF006683紧致_正常备货_自主品牌_妊娠纹膏:
+
+'./output/product_manage_ID/054_7252_JLTH00612915 新品_正常备货_通货_日本再生硅口腔抑菌牙膏 gleiser再生硅-100克':
+
+./output/product_manage_ID/055_6565_JLTH00612899_清库存_通货_正泰林日文抑菌止痒膏20g:
+
+'./output/product_manage_ID/055_7252_JLTH00612915 新品_正常备货_通货_日本再生硅口腔抑菌牙膏 gleiser再生硅-100克':
+
+./output/product_manage_ID/056_6565_JLTH00612899_清库存_通货_正泰林日文抑菌止痒膏20g:
+
+./output/product_manage_ID/056_6942_697JLYF006680_清库存_自主品牌_去疣膏:
+
+./output/product_manage_ID/057_6942_697JLYF006680_清库存_自主品牌_去疣膏:
+
+'./output/product_manage_ID/057_7256_JLTH00612912 新品_正常备货_通货_薄荷口腔喷雾10ml（新）':
+
+./output/product_manage_ID/058_6944_697JLYF006682_清库存_自主品牌_褥疮膏:
+
+'./output/product_manage_ID/058_7256_JLTH00612912 新品_正常备货_通货_薄荷口腔喷雾10ml（新）':
+
+./output/product_manage_ID/059_6944_697JLYF006682_清库存_自主品牌_褥疮膏:
+
+'./output/product_manage_ID/059_7259_JLTH00612906 新品_正常备货_通货_日本益生菌亮白牙粉':
+
+./output/product_manage_ID/060_6943_697JLYF006681_清库存_自主品牌_硫磺膏:
+
+'./output/product_manage_ID/060_7259_JLTH00612906 新品_正常备货_通货_日本益生菌亮白牙粉':
+
+'./output/product_manage_ID/061_4548_JLTH00612882_正常备货_通货_OUHOE 身体焕白霜100g':
+
+./output/product_manage_ID/061_6943_697JLYF006681_清库存_自主品牌_硫磺膏:
+
+'./output/product_manage_ID/062_4548_JLTH00612882_正常备货_通货_OUHOE 身体焕白霜100g':
+
+./output/product_manage_ID/062_6939_697JLYF006677_清库存_自主品牌_甲状康膏:
+
+'./output/product_manage_ID/063_3622_JLTH00612860_正常备货_通货_澳芙雪377美白祛斑面霜 50g_瓶':
+
+./output/product_manage_ID/063_6939_697JLYF006677_清库存_自主品牌_甲状康膏:
+
+'./output/product_manage_ID/064_3622_JLTH00612860_正常备货_通货_澳芙雪377美白祛斑面霜 50g_瓶':
+
+./output/product_manage_ID/064_6348_JLTH00612896_正常备货_通货_【蓝莓叶黄素】眼部护理液12ml:
+
+./output/product_manage_ID/065_6348_JLTH00612896_正常备货_通货_【蓝莓叶黄素】眼部护理液12ml:
+
+./output/product_manage_ID/065_6938_697JLYF006678_清库存_自主品牌_白斑净膏:
+
+./output/product_manage_ID/066_2615_697JLYF006648_正常备货_自主品牌_LYDIMOON晚安冻膜:
+
+./output/product_manage_ID/066_6938_697JLYF006678_清库存_自主品牌_白斑净膏:
+
+./output/product_manage_ID/067_2615_697JLYF006648_正常备货_自主品牌_LYDIMOON晚安冻膜:
+
+'./output/product_manage_ID/067_7251_JLTH00612911 新品_正常备货_通货_柠檬去角质啫喱100ml':
+
+'./output/product_manage_ID/068_7250_JLTH00612910 新品_正常备货_通货_二硫化硒去屑洗发水':
+
+'./output/product_manage_ID/068_7251_JLTH00612911 新品_正常备货_通货_柠檬去角质啫喱100ml':
+
+./output/product_manage_ID/069_326_JLTH00612642_正常备货_通货_乳木果磨砂膏250g:
+
+'./output/product_manage_ID/069_7250_JLTH00612910 新品_正常备货_通货_二硫化硒去屑洗发水':
+
+./output/product_manage_ID/070_326_JLTH00612642_正常备货_通货_乳木果磨砂膏250g:
+
+'./output/product_manage_ID/070_7255_JLTH00612909 新品_清库存_通货_坂枝野寻足跟痛外用药贴':
+
+'./output/product_manage_ID/071_6660_JLTH00612905_正常备货_自主品牌_FrstBaby BABY HAIR LOTION   （护理生发液）_30ml':
+
+'./output/product_manage_ID/071_7255_JLTH00612909 新品_清库存_通货_坂枝野寻足跟痛外用药贴':
+
+'./output/product_manage_ID/072_6660_JLTH00612905_正常备货_自主品牌_FrstBaby BABY HAIR LOTION   （护理生发液）_30ml':
+
+./output/product_manage_ID/072_6868_697JLYF006674_正常备货_自主品牌_LYDIMOON植物舒缓精华乳:
+
+./output/product_manage_ID/073_6351_JLTH00612897_正常备货_通货_伊喜畅5%碳酸氢钠溶液外阴清洗液250ml_瓶:
+
+./output/product_manage_ID/073_6868_697JLYF006674_正常备货_自主品牌_LYDIMOON植物舒缓精华乳:
+
+./output/product_manage_ID/074_6351_JLTH00612897_正常备货_通货_伊喜畅5%碳酸氢钠溶液外阴清洗液250ml_瓶:
+
+'./output/product_manage_ID/074_6594_JLTH00612904_正常备货_通货_染发剂 栗棕色230ml':
+
+'./output/product_manage_ID/075_6593_JLTH00612903_正常备货_通货_染发剂 自然黑色230ml':
+
+'./output/product_manage_ID/075_6594_JLTH00612904_正常备货_通货_染发剂 栗棕色230ml':
+
+'./output/product_manage_ID/076_2974_JLTH00612843_正常备货_通货_额头贴抬头纹额头贴 一盒（10片）':
+
+'./output/product_manage_ID/076_6593_JLTH00612903_正常备货_通货_染发剂 自然黑色230ml':
+
+'./output/product_manage_ID/077_2974_JLTH00612843_正常备货_通货_额头贴抬头纹额头贴 一盒（10片）':
+
+./output/product_manage_ID/077_3621_JLTH00612859_清库存_通货_hih植萃焕颜舒缓花瓣水:
+
+./output/product_manage_ID/078_3621_JLTH00612859_清库存_通货_hih植萃焕颜舒缓花瓣水:
+
+'./output/product_manage_ID/078_6349_JLTH00612890_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_15cm 1片_袋':
+
+./output/product_manage_ID/079_1401_697JLYF006614_正常备货_自主品牌_IUALLURE草本精华眼霜:
+
+'./output/product_manage_ID/079_6349_JLTH00612890_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_15cm 1片_袋':
+
+./output/product_manage_ID/080_1401_697JLYF006614_正常备货_自主品牌_IUALLURE草本精华眼霜:
+
+'./output/product_manage_ID/080_7258_JLTH00612907 新品_正常备货_通货_SADOER硫磺除螨沐浴露500ml':
+
+./output/product_manage_ID/081_6867_697JLYF006673_正常备货_自主品牌_LYDIMOON幽夹舒柔脱毛膏100g:
+
+'./output/product_manage_ID/081_7258_JLTH00612907 新品_正常备货_通货_SADOER硫磺除螨沐浴露500ml':
+
+'./output/product_manage_ID/082_6347_JLTH00612891_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_50cm 1卷_盒':
+
+./output/product_manage_ID/082_6867_697JLYF006673_正常备货_自主品牌_LYDIMOON幽夹舒柔脱毛膏100g:
+
+./output/product_manage_ID/083_3157_JLTH00612849_正常备货_通货_儿童面霜50g开咪猫润肤霜（黄色）:
+
+'./output/product_manage_ID/083_6347_JLTH00612891_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_50cm 1卷_盒':
+
+./output/product_manage_ID/084_3157_JLTH00612849_正常备货_通货_儿童面霜50g开咪猫润肤霜（黄色）:
+
+./output/product_manage_ID/084_4549_JLTH00612883_清库存_通货_脂肪康保健膏30g:
+
+./output/product_manage_ID/085_4549_JLTH00612883_清库存_通货_脂肪康保健膏30g:
+
+./output/product_manage_ID/085_4550_JLTH00612885_清库存_通货_疣尤优肤平液广雅优肤平膏1盒:
+
+./output/product_manage_ID/086_2486_JLTH00612814_正常备货_通货_臻羞抚痕平滑精华霜50g:
+
+./output/product_manage_ID/086_4550_JLTH00612885_清库存_通货_疣尤优肤平液广雅优肤平膏1盒:
+
+./output/product_manage_ID/087_2486_JLTH00612814_正常备货_通货_臻羞抚痕平滑精华霜50g:
+
+'./output/product_manage_ID/087_5516_697JLYF006670_正常备货_自主品牌_LYDIMOON维 C 美白皂':
+
+'./output/product_manage_ID/088_5516_697JLYF006670_正常备货_自主品牌_LYDIMOON维 C 美白皂':
+
+./output/product_manage_ID/088_6333_JLTH00612892_正常备货_通货_奶瓶果蔬清洗剂【袋装4ml_20条】:
+
+./output/product_manage_ID/089_5517_697JLYF006652_正常备货_自主品牌_LYDIMOON去烟渍美白牙膏:
+
+./output/product_manage_ID/089_6333_JLTH00612892_正常备货_通货_奶瓶果蔬清洗剂【袋装4ml_20条】:
+
+./output/product_manage_ID/090_2542_697JLYF006643_正常备货_自主品牌_LYDIMOON美白干性牙贴（7对装）:
+
+./output/product_manage_ID/090_5517_697JLYF006652_正常备货_自主品牌_LYDIMOON去烟渍美白牙膏:
+
+./output/product_manage_ID/091_2542_697JLYF006643_正常备货_自主品牌_LYDIMOON美白干性牙贴（7对装）:
+
+'./output/product_manage_ID/091_5291_697JLYF006671_正常备货_自主品牌_LYDIMOON维 C 美白霜':
+
+./output/product_manage_ID/092_4554_JLTH00612878_正常备货_通货_【利贝婴儿】倍护防皴霜50g（补水锁水，倍润防皴）:
+
+'./output/product_manage_ID/092_5291_697JLYF006671_正常备货_自主品牌_LYDIMOON维 C 美白霜':
+
+./output/product_manage_ID/093_4554_JLTH00612878_正常备货_通货_【利贝婴儿】倍护防皴霜50g（补水锁水，倍润防皴）:
+
+./output/product_manage_ID/093_5293_697JLYF006664_正常备货_自主品牌_LYDIMOON摩洛哥坚果油柔顺护发素:
+
+./output/product_manage_ID/094_1402_697JLYF006616_正常备货_自主品牌_IUALLURE腋窝美白霜:
+
+./output/product_manage_ID/094_5293_697JLYF006664_正常备货_自主品牌_LYDIMOON摩洛哥坚果油柔顺护发素:
+
+./output/product_manage_ID/095_1402_697JLYF006616_正常备货_自主品牌_IUALLURE腋窝美白霜:
+
+./output/product_manage_ID/095_4411_JLTH00612864_正常备货_通货_脱毛套装【60g+30g】带刮板:
+
+./output/product_manage_ID/096_4411_JLTH00612864_正常备货_通货_脱毛套装【60g+30g】带刮板:
+
+./output/product_manage_ID/096_6345_JLTH00612898_正常备货_通货_为一生洗眼液洗眼液180ML:
+
+'./output/product_manage_ID/097_3619_JLTH00612857_正常备货_通货_BIOAOUA芦荟温和脱毛膏 60g':
+
+./output/product_manage_ID/097_6345_JLTH00612898_正常备货_通货_为一生洗眼液洗眼液180ML:
+
+./output/product_manage_ID/098_2616_697JLYF006650_正常备货_自主品牌_LYDIMOON美白祛斑霜:
+
+'./output/product_manage_ID/098_3619_JLTH00612857_正常备货_通货_BIOAOUA芦荟温和脱毛膏 60g':
+
+./output/product_manage_ID/099_2616_697JLYF006650_正常备货_自主品牌_LYDIMOON美白祛斑霜:
+
+./output/product_manage_ID/099_4361_697JLYF006641_正常备货_自主品牌_LYDIMOON素颜霜50g:
+
+./output/product_manage_ID/100_4361_697JLYF006641_正常备货_自主品牌_LYDIMOON素颜霜50g:
+
+./output/product_manage_ID/100_4413_JLTH00612863_正常备货_通货_脱毛蜡纸20贴_10片_20贴_10片:
+
+./output/product_manage_ID/101_4384_JLTH00612869_正常备货_通货_IFAST黑灵芝洗发乳200ml:
+
+./output/product_manage_ID/101_4413_JLTH00612863_正常备货_通货_脱毛蜡纸20贴_10片_20贴_10片:
+
+./output/product_manage_ID/102_3624_JLTH00612861_正常备货_通货_Sumifun维E脂肪粒乳20维E护肤净脂肪粒:
+
+./output/product_manage_ID/102_4384_JLTH00612869_正常备货_通货_IFAST黑灵芝洗发乳200ml:
+
+./output/product_manage_ID/103_3624_JLTH00612861_正常备货_通货_Sumifun维E脂肪粒乳20维E护肤净脂肪粒:
+
+./output/product_manage_ID/103_997_697JLYF006604_正常备货_自主品牌_IUALLURE深海泥洁面奶:
+
+./output/product_manage_ID/104_4412_JLTH00612872_正常备货_通货_脱毛喷雾+刮板:
+
+./output/product_manage_ID/104_997_697JLYF006604_正常备货_自主品牌_IUALLURE深海泥洁面奶:
+
+./output/product_manage_ID/105_3041_JLTH00612837_清库存_通货_疣优肤平瘊子去尤点痣膏优肤平膏:
+
+./output/product_manage_ID/105_4412_JLTH00612872_正常备货_通货_脱毛喷雾+刮板:
+
+'./output/product_manage_ID/106_2841_JLTH00612829_清库存_通货_sumifun 速卖通跨境 淋巴保健膏10g':
+
+./output/product_manage_ID/106_3041_JLTH00612837_清库存_通货_疣优肤平瘊子去尤点痣膏优肤平膏:
+
+'./output/product_manage_ID/107_2841_JLTH00612829_清库存_通货_sumifun 速卖通跨境 淋巴保健膏10g':
+
+./output/product_manage_ID/107_3042_JLTH00612839_清库存_通货_补骨脂白斑抑菌液豫宁美-白斑保健膏30g:
+
+./output/product_manage_ID/108_2840_JLTH00612828_清库存_通货_Sumifun跨境外贸溢脂性皮炎膏20g:
+
+./output/product_manage_ID/108_3042_JLTH00612839_清库存_通货_补骨脂白斑抑菌液豫宁美-白斑保健膏30g:
+
+./output/product_manage_ID/109_2840_JLTH00612828_清库存_通货_Sumifun跨境外贸溢脂性皮炎膏20g:
+
+./output/product_manage_ID/109_3039_JLTH00612835_清库存_通货_肤康百草止痒膏乳膏30g肤康瓶装:
+
+./output/product_manage_ID/110_3039_JLTH00612835_清库存_通货_肤康百草止痒膏乳膏30g肤康瓶装:
+
+./output/product_manage_ID/110_3040_JLTH00612836_清库存_通货_点痣膏20g:
+
+./output/product_manage_ID/111_3040_JLTH00612836_清库存_通货_点痣膏20g:
+
+./output/product_manage_ID/111_996_697JLYF006605_正常备货_自主品牌_IUALLURE脱毛喷雾:
+
+./output/product_manage_ID/112_2972_JLTH00612838_清库存_通货_仙怀堂白癜膏20g:
+
+./output/product_manage_ID/112_996_697JLYF006605_正常备货_自主品牌_IUALLURE脱毛喷雾:
+
+./output/product_manage_ID/113_2972_JLTH00612838_清库存_通货_仙怀堂白癜膏20g:
+
+./output/product_manage_ID/113_3153_JLTH00612846_正常备货_通货_大头鸟儿童益生菌皓齿牙膏草莓味:
+
+./output/product_manage_ID/114_3153_JLTH00612846_正常备货_通货_大头鸟儿童益生菌皓齿牙膏草莓味:
+
+./output/product_manage_ID/114_3163_JLTH00612856_正常备货_通货_美度防脱育发洗发露500ml防脱洗发水:
+
+'./output/product_manage_ID/115_2267_JLTH00612785_清库存_通货_湿疹瘙痒皮肤外用膏 20g':
+
+./output/product_manage_ID/115_3163_JLTH00612856_正常备货_通货_美度防脱育发洗发露500ml防脱洗发水:
+
+'./output/product_manage_ID/116_2267_JLTH00612785_清库存_通货_湿疹瘙痒皮肤外用膏 20g':
+
+./output/product_manage_ID/116_3152_JLTH00612845_正常备货_通货_大头鸟婴幼儿奥拉氟儿童牙膏蜜桃味:
+
+./output/product_manage_ID/117_3152_JLTH00612845_正常备货_通货_大头鸟婴幼儿奥拉氟儿童牙膏蜜桃味:
+
+./output/product_manage_ID/117_3158_JLTH00612850_正常备货_通货_婴儿爽身粉玉米痱子粉140g婴童玉米爽身粉（紫色）:
+
+./output/product_manage_ID/118_1445_697JLYF006625_清库存_自主品牌_佰氏除疤凝露:
+
+./output/product_manage_ID/118_3158_JLTH00612850_正常备货_通货_婴儿爽身粉玉米痱子粉140g婴童玉米爽身粉（紫色）:
+
+./output/product_manage_ID/119_1445_697JLYF006625_清库存_自主品牌_佰氏除疤凝露:
+
+./output/product_manage_ID/119_1518_697JLYF006630_正常备货_自主品牌_IUallure防脱育发液:
+
+./output/product_manage_ID/120_1518_697JLYF006630_正常备货_自主品牌_IUallure防脱育发液:
+
+./output/product_manage_ID/120_2259_JLTH00612786_清库存_通货_灸之恋脂肪膏乳白色30g_盒:
+
+./output/product_manage_ID/121_1520_697JLYF006632_正常备货_自主品牌_LYDIMOON睫毛液滋养液:
+
+./output/product_manage_ID/121_2259_JLTH00612786_清库存_通货_灸之恋脂肪膏乳白色30g_盒:
+
+./output/product_manage_ID/122_1520_697JLYF006632_正常备货_自主品牌_LYDIMOON睫毛液滋养液:
+
+./output/product_manage_ID/122_2649_JLTH00612823_清库存_通货_痛风膏35g_盒:
+
+./output/product_manage_ID/123_2649_JLTH00612823_清库存_通货_痛风膏35g_盒:
+
+./output/product_manage_ID/123_2755_697JLYF006651_正常备货_自主品牌_LYDIMOON角蛋白发膜:
+
+./output/product_manage_ID/124_1515_697JLYF006627_清库存_自主品牌_LYDIMOON中药肚脐贴:
+
+./output/product_manage_ID/124_2544_697JLYF006645_自由定价_自主品牌_LYDIMOON益生菌漱口水:
+
+./output/product_manage_ID/124_2755_697JLYF006651_正常备货_自主品牌_LYDIMOON角蛋白发膜:
+
+./output/product_manage_ID/125_1515_697JLYF006627_清库存_自主品牌_LYDIMOON中药肚脐贴:
+
+./output/product_manage_ID/125_2755_697JLYF006651_正常备货_自主品牌_LYDIMOON角蛋白发膜:
+
+./output/product_manage_ID/125_3154_JLTH00612847_正常备货_通货_大头鸟溶菌酶儿童健齿牙膏溶菌酶牙膏200g:
+
+./output/product_manage_ID/126_1515_697JLYF006627_清库存_自主品牌_LYDIMOON中药肚脐贴:
+
+./output/product_manage_ID/126_1516_697JLYF006628_正常备货_自主品牌_LYDIMOON彩盒肚脐贴:
+
+./output/product_manage_ID/126_3154_JLTH00612847_正常备货_通货_大头鸟溶菌酶儿童健齿牙膏溶菌酶牙膏200g:
+
+./output/product_manage_ID/127_1516_697JLYF006628_正常备货_自主品牌_LYDIMOON彩盒肚脐贴:
+
+./output/product_manage_ID/127_2489_JLTH00612817_清库存_通货_翼颜水杨酸毛孔细致霜30g:
+
+./output/product_manage_ID/127_3154_JLTH00612847_正常备货_通货_大头鸟溶菌酶儿童健齿牙膏溶菌酶牙膏200g:
+
+./output/product_manage_ID/128_1516_697JLYF006628_正常备货_自主品牌_LYDIMOON彩盒肚脐贴:
+
+./output/product_manage_ID/128_2488_JLTH00612816_清库存_通货_翼颜15%壬二酸净颜凝露30g:
+
+./output/product_manage_ID/128_2489_JLTH00612817_清库存_通货_翼颜水杨酸毛孔细致霜30g:
+
+./output/product_manage_ID/129_2488_JLTH00612816_清库存_通货_翼颜15%壬二酸净颜凝露30g:
+
+./output/product_manage_ID/129_2489_JLTH00612817_清库存_通货_翼颜水杨酸毛孔细致霜30g:
+
+./output/product_manage_ID/129_3159_JLTH00612851_正常备货_通货_婴儿氨基酸身体乳130ml开咪猫婴童舒柔保湿润肤露紫色:
+
+./output/product_manage_ID/130_2333_JLTH00612799_清库存_通货_梵飞丝维A醇精华液30ml:
+
+./output/product_manage_ID/130_2488_JLTH00612816_清库存_通货_翼颜15%壬二酸净颜凝露30g:
+
+./output/product_manage_ID/130_3159_JLTH00612851_正常备货_通货_婴儿氨基酸身体乳130ml开咪猫婴童舒柔保湿润肤露紫色:
+
+./output/product_manage_ID/131_2332_JLTH00612798_清库存_通货_梵飞丝VC凝颜精华液30ml:
+
+./output/product_manage_ID/131_2333_JLTH00612799_清库存_通货_梵飞丝维A醇精华液30ml:
+
+./output/product_manage_ID/131_3159_JLTH00612851_正常备货_通货_婴儿氨基酸身体乳130ml开咪猫婴童舒柔保湿润肤露紫色:
+
+./output/product_manage_ID/132_1400_697JLYF006610_清库存_自主品牌_IUALLURE脱毛膏:
+
+./output/product_manage_ID/132_2332_JLTH00612798_清库存_通货_梵飞丝VC凝颜精华液30ml:
+
+./output/product_manage_ID/132_2333_JLTH00612799_清库存_通货_梵飞丝维A醇精华液30ml:
+
+./output/product_manage_ID/133_1400_697JLYF006610_清库存_自主品牌_IUALLURE脱毛膏:
+
+./output/product_manage_ID/133_1404_697JLYF006622_正常备货_自主品牌_IUALLURE纤体塑形霜:
+
+./output/product_manage_ID/133_2332_JLTH00612798_清库存_通货_梵飞丝VC凝颜精华液30ml:
+
+./output/product_manage_ID/134_1400_697JLYF006610_清库存_自主品牌_IUALLURE脱毛膏:
+
+./output/product_manage_ID/134_1404_697JLYF006622_正常备货_自主品牌_IUALLURE纤体塑形霜:
+
+./output/product_manage_ID/134_397_JLTH00612703_正常备货_通货_赋活肌密保湿眼霜20g:
+
+./output/product_manage_ID/135_1404_697JLYF006622_正常备货_自主品牌_IUALLURE纤体塑形霜:
+
+./output/product_manage_ID/135_2327_JLTH00612805_正常备货_通货_芙芊姿魅体精华沐浴露330ml:
+
+./output/product_manage_ID/135_397_JLTH00612703_正常备货_通货_赋活肌密保湿眼霜20g:
+
+./output/product_manage_ID/136_2327_JLTH00612805_正常备货_通货_芙芊姿魅体精华沐浴露330ml:
+
+./output/product_manage_ID/136_2839_JLTH00612834_正常备货_通货_眼部护理液清洁眼部洗眼液200ml:
+
+./output/product_manage_ID/136_397_JLTH00612703_正常备货_通货_赋活肌密保湿眼霜20g:
+
+./output/product_manage_ID/137_2327_JLTH00612805_正常备货_通货_芙芊姿魅体精华沐浴露330ml:
+
+./output/product_manage_ID/137_2839_JLTH00612834_正常备货_通货_眼部护理液清洁眼部洗眼液200ml:
+
+./output/product_manage_ID/137_995_697JLYF006606_正常备货_自主品牌_IUALLURE生姜洗发水:
+
+./output/product_manage_ID/138_2839_JLTH00612834_正常备货_通货_眼部护理液清洁眼部洗眼液200ml:
+
+./output/product_manage_ID/138_3155_JLTH00612848_正常备货_通货_大头鸟儿童清爽洁净洗发沐浴露1000ml:
+
+./output/product_manage_ID/138_995_697JLYF006606_正常备货_自主品牌_IUALLURE生姜洗发水:
+
+./output/product_manage_ID/139_1346_JLTH00612764_清库存_通货_色娜娜竹炭吸黑头膏60g:
+
+./output/product_manage_ID/139_3155_JLTH00612848_正常备货_通货_大头鸟儿童清爽洁净洗发沐浴露1000ml:
+
+./output/product_manage_ID/139_995_697JLYF006606_正常备货_自主品牌_IUALLURE生姜洗发水:
+
+./output/product_manage_ID/140_1346_JLTH00612764_清库存_通货_色娜娜竹炭吸黑头膏60g:
+
+./output/product_manage_ID/140_1519_697JLYF006631_正常备货_自主品牌_IUallure足部按摩精油:
+
+./output/product_manage_ID/140_3155_JLTH00612848_正常备货_通货_大头鸟儿童清爽洁净洗发沐浴露1000ml:
+
+./output/product_manage_ID/141_1346_JLTH00612764_清库存_通货_色娜娜竹炭吸黑头膏60g:
+
+./output/product_manage_ID/141_1519_697JLYF006631_正常备货_自主品牌_IUallure足部按摩精油:
+
+./output/product_manage_ID/141_2261_JLTH00612789_清库存_通货_九福堂优肤平抑菌液10:
+
+./output/product_manage_ID/142_1519_697JLYF006631_正常备货_自主品牌_IUallure足部按摩精油:
+
+./output/product_manage_ID/142_2261_JLTH00612789_清库存_通货_九福堂优肤平抑菌液10:
+
+./output/product_manage_ID/142_968_JL1284333_清库存_通货_中药肚脐贴:
+
+./output/product_manage_ID/143_2261_JLTH00612789_清库存_通货_九福堂优肤平抑菌液10:
+
+./output/product_manage_ID/143_384_JLTH00612690_正常备货_通货_胸部护理霜80G:
+
+./output/product_manage_ID/143_968_JL1284333_清库存_通货_中药肚脐贴:
+
+./output/product_manage_ID/144_1521_697JLYF006633_正常备货_自主品牌_IUALLURE美乳丰胸:
+
+./output/product_manage_ID/144_384_JLTH00612690_正常备货_通货_胸部护理霜80G:
+
+./output/product_manage_ID/144_968_JL1284333_清库存_通货_中药肚脐贴:
+
+./output/product_manage_ID/145_1405_697JLYF006608_正常备货_自主品牌_IUALLURE脱毛慕斯:
+
+./output/product_manage_ID/145_1521_697JLYF006633_正常备货_自主品牌_IUALLURE美乳丰胸:
+
+./output/product_manage_ID/145_384_JLTH00612690_正常备货_通货_胸部护理霜80G:
+
+./output/product_manage_ID/146_1286_697JLYF006611_正常备货_自主品牌_IUALLURE美乳霜:
+
+./output/product_manage_ID/146_1405_697JLYF006608_正常备货_自主品牌_IUALLURE脱毛慕斯:
+
+./output/product_manage_ID/146_1521_697JLYF006633_正常备货_自主品牌_IUALLURE美乳丰胸:
+
+./output/product_manage_ID/147_1286_697JLYF006611_正常备货_自主品牌_IUALLURE美乳霜:
+
+./output/product_manage_ID/147_1405_697JLYF006608_正常备货_自主品牌_IUALLURE脱毛慕斯:
+
+./output/product_manage_ID/147_2335_JLTH00612812_清库存_通货_小分子熬夜急救精华露30ml:
+
+./output/product_manage_ID/148_1286_697JLYF006611_正常备货_自主品牌_IUALLURE美乳霜:
+
+./output/product_manage_ID/148_2335_JLTH00612812_清库存_通货_小分子熬夜急救精华露30ml:
+
+./output/product_manage_ID/148_565_JLTH00612649_正常备货_通货_控油去屑洗发水500ML:
+
+./output/product_manage_ID/149_1067_JLTH00612729_正常备货_通货_德德维芙老款瓶装脱毛膏:
+
+./output/product_manage_ID/149_2335_JLTH00612812_清库存_通货_小分子熬夜急救精华露30ml:
+
+./output/product_manage_ID/149_565_JLTH00612649_正常备货_通货_控油去屑洗发水500ML:
+
+./output/product_manage_ID/150_1067_JLTH00612729_正常备货_通货_德德维芙老款瓶装脱毛膏:
+
+./output/product_manage_ID/150_2264_JLTH00612793_正常备货_通货_婴童牛奶洗发沐浴露260ml:
+
+./output/product_manage_ID/150_565_JLTH00612649_正常备货_通货_控油去屑洗发水500ML:
+
+./output/product_manage_ID/151_1067_JLTH00612729_正常备货_通货_德德维芙老款瓶装脱毛膏:
+
+./output/product_manage_ID/151_2264_JLTH00612793_正常备货_通货_婴童牛奶洗发沐浴露260ml:
+
+./output/product_manage_ID/151_314_JLTH00612603_正常备货_通货_芙迪男士脱毛膏:
+
+./output/product_manage_ID/152_1351_JLTH00612771_清库存_通货_免洗头发喷雾150ml:
+
+./output/product_manage_ID/152_2264_JLTH00612793_正常备货_通货_婴童牛奶洗发沐浴露260ml:
+
+./output/product_manage_ID/152_314_JLTH00612603_正常备货_通货_芙迪男士脱毛膏:
+
+./output/product_manage_ID/153_1351_JLTH00612771_清库存_通货_免洗头发喷雾150ml:
+
+./output/product_manage_ID/153_1353_JLTH00612774_清库存_通货_亚玛丽小苏打亮白牙膏210g:
+
+./output/product_manage_ID/153_314_JLTH00612603_正常备货_通货_芙迪男士脱毛膏:
+
+./output/product_manage_ID/154_1029_JLTH00612711_清库存_通货_伊露莹洗发水500ml:
+
+./output/product_manage_ID/154_1351_JLTH00612771_清库存_通货_免洗头发喷雾150ml:
+
+./output/product_manage_ID/154_1353_JLTH00612774_清库存_通货_亚玛丽小苏打亮白牙膏210g:
+
+./output/product_manage_ID/155_1029_JLTH00612711_清库存_通货_伊露莹洗发水500ml:
+
+./output/product_manage_ID/155_1353_JLTH00612774_清库存_通货_亚玛丽小苏打亮白牙膏210g:
+
+./output/product_manage_ID/155_2336_JLTH00612811_清库存_通货_O-ZONE_欧志姆香草薄荷牙膏100g:
+
+./output/product_manage_ID/156_1029_JLTH00612711_清库存_通货_伊露莹洗发水500ml:
+
+./output/product_manage_ID/156_2336_JLTH00612811_清库存_通货_O-ZONE_欧志姆香草薄荷牙膏100g:
+
+./output/product_manage_ID/156_2655_JLTH00612822_清库存_通货_静脉型曲张膏冷敷凝胶20g一支:
+
+./output/product_manage_ID/157_1147_JLTH00612756_清库存_通货_aichun美乳霜:
+
+./output/product_manage_ID/157_2336_JLTH00612811_清库存_通货_O-ZONE_欧志姆香草薄荷牙膏100g:
+
+./output/product_manage_ID/157_2655_JLTH00612822_清库存_通货_静脉型曲张膏冷敷凝胶20g一支:
+
+./output/product_manage_ID/158_1147_JLTH00612756_清库存_通货_aichun美乳霜:
+
+./output/product_manage_ID/158_1340_JLTH00612776_清库存_通货_爱臣美鼻养护精华油10ml:
+
+./output/product_manage_ID/158_2655_JLTH00612822_清库存_通货_静脉型曲张膏冷敷凝胶20g一支:
+
+./output/product_manage_ID/159_1147_JLTH00612756_清库存_通货_aichun美乳霜:
+
+./output/product_manage_ID/159_1340_JLTH00612776_清库存_通货_爱臣美鼻养护精华油10ml:
+
+./output/product_manage_ID/160_315_JLY014287900003_自由定价_通货_韩婵深海泥:
+
+./output/product_manage_ID/160_6328_JLTH00612889_礼品_饰品类_可爱卡通洞洞鞋鞋花套装随机款式混（6个一卡）:
+
+./output/product_manage_ID/161_1023_JLTH00612706_自由定价_通货_色娜娜六胜肽抗皱面霜:
+
+./output/product_manage_ID/161_2756_JLTH00612827_礼品_通货_韩纪薰衣草香型香皂108g:
+
+./output/product_manage_ID/162_1340_JLTH00612776_清库存_通货_爱臣美鼻养护精华油10ml:
+
+./output/product_manage_ID/162_2480_697JLYF006612_礼品_自主品牌_LYDIMOON芦荟胶:
+
+./output/product_manage_ID/163_1056_JLTH00612736_自由定价_通货_黑头清洁面膜80g:
+
+./output/product_manage_ID/164_1034_JLTH00612713_自由定价_通货_玖美堂奢护顺滑焗油发膜:
+
+./output/product_manage_ID/165_6328_JLTH00612889_礼品_饰品类_可爱卡通洞洞鞋鞋花套装随机款式混（6个一卡）:
+
+./output/product_manage_ID/166_2756_JLTH00612827_礼品_通货_韩纪薰衣草香型香皂108g:
+
+./output/product_manage_ID/167_2480_697JLYF006612_礼品_自主品牌_LYDIMOON芦荟胶:
+
+./output/product_manage_TK:
+ 001_4556_JLTH00612880_正常备货_通货_儿童防晒喷雾/                                           080_6944_697JLYF006682_清库存_自主品牌_褥疮膏/
+ 002_3162_JLTH00612855_正常备货_通货_皇家儿童防晒喷雾120ml/                                 '081_7259_JLTH00612906 新品_正常备货_通货_日本益生菌亮白牙粉'/
+ 003_4555_JLTH00612879_正常备货_通货_皇家婴童儿童防晒霜圆防晒SPF40PA+++/                     082_6943_697JLYF006681_清库存_自主品牌_硫磺膏/
+'004_6350_JLTH00612893_正常备货_通货_South Moon 草本身体护理喷雾30ml'/                      '083_4548_JLTH00612882_正常备货_通货_OUHOE 身体焕白霜100g'/
+ 005_3153_JLTH00612846_正常备货_通货_大头鸟儿童益生菌皓齿牙膏草莓味/                         084_6939_697JLYF006677_清库存_自主品牌_甲状康膏/
+ 006_2843_JLTH00612831_正常备货_通货_SADOER椰子沐浴露500ml/                                 '085_3622_JLTH00612860_正常备货_通货_澳芙雪377美白祛斑面霜 50g_瓶'/
+ 007_5297_697JLYF006655_正常备货_自主品牌_LYDIMOON烟酰胺美白修复精华液/                      086_6348_JLTH00612896_正常备货_通货_【蓝莓叶黄素】眼部护理液12ml/
+ 008_3154_JLTH00612847_正常备货_通货_大头鸟溶菌酶儿童健齿牙膏溶菌酶牙膏200g/                 087_6938_697JLYF006678_清库存_自主品牌_白斑净膏/
+ 009_1068_JLTH00612730_正常备货_通货_德德维芙舒缓修护乳/                                     088_4547_JLTH00612881_正常备货_通货_韩美肌麦角硫因灵芝凝时抗皱霜/
+ 010_3155_JLTH00612848_正常备货_通货_大头鸟儿童清爽洁净洗发沐浴露1000ml/                     089_3039_JLTH00612835_清库存_通货_肤康百草止痒膏乳膏30g肤康瓶装/
+ 011_4552_JLTH00612884_正常备货_通货_明澄雅美白沐浴露300ml瓶/                                090_1405_697JLYF006608_正常备货_自主品牌_IUALLURE脱毛慕斯/
+ 012_3156_JLTH00612854_正常备货_通货_大头鸟婴幼儿口腔清洁喷雾草莓味-备护型/                 '091_7251_JLTH00612911 新品_正常备货_通货_柠檬去角质啫喱100ml'/
+ 013_2973_JLTH00612840_正常备货_通货_胶肽硫精华液50ml_瓶/                                   '092_7250_JLTH00612910 新品_正常备货_通货_二硫化硒去屑洗发水'/
+ 014_3163_JLTH00612856_正常备货_通货_美度防脱育发洗发露500ml防脱洗发水/                      093_326_JLTH00612642_正常备货_通货_乳木果磨砂膏250g/
+ 015_2490_JLTH00612818_正常备货_通货_指甲液30ml+锉刀+创可贴4张+棉签4根/                     '094_7255_JLTH00612909 新品_清库存_通货_坂枝野寻足跟痛外用药贴'/
+ 016_5296_697JLYF006661_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱眼霜/                          095_6868_697JLYF006674_正常备货_自主品牌_LYDIMOON植物舒缓精华乳/
+ 017_5518_697JLYF006653_正常备货_自主品牌_LYDIMOON去咖啡茶渍美白牙膏/                        096_6351_JLTH00612897_正常备货_通货_伊喜畅5%碳酸氢钠溶液外阴清洗液250ml_瓶/
+'018_4387_JLTH00612868_正常备货_通货_澳芙雪377次抛嫩白祛斑精华液 1.5ml_10支_盒'/            '097_6594_JLTH00612904_正常备货_通货_染发剂 栗棕色230ml'/
+ 019_4554_JLTH00612878_正常备货_通货_【利贝婴儿】倍护防皴霜50g（补水锁水，倍润防皴）/       '098_6593_JLTH00612903_正常备货_通货_染发剂 自然黑色230ml'/
+ 020_5519_697JLYF006660_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱修复身体乳/                   '099_2974_JLTH00612843_正常备货_通货_额头贴抬头纹额头贴 一盒（10片）'/
+ 021_5287_697JLYF006665_正常备货_自主品牌_LYDIMOON摩洛哥坚果油柔顺洁净洗发水/                100_1401_697JLYF006614_正常备货_自主品牌_IUALLURE草本精华眼霜/
+ 022_4410_JLTH00612875_正常备货_通货_耿博士B5水杨酸面膜耿博士维生素原B5水杨酸净澈面膜/      '101_7258_JLTH00612907 新品_正常备货_通货_SADOER硫磺除螨沐浴露500ml'/
+'023_3623_JLTH00612862_正常备货_通货_澳芙雪377嫩白祛斑精华液 30ml_瓶'/                      '102_2267_JLTH00612785_清库存_通货_湿疹瘙痒皮肤外用膏 20g'/
+ 024_996_697JLYF006605_正常备货_自主品牌_IUALLURE脱毛喷雾/                                   103_3158_JLTH00612850_正常备货_通货_婴儿爽身粉玉米痱子粉140g婴童玉米爽身粉（紫色）/
+'025_6660_JLTH00612905_正常备货_自主品牌_FrstBaby BABY HAIR LOTION   （护理生发液）_30ml'/   104_1067_JLTH00612729_正常备货_通货_德德维芙老款瓶装脱毛膏/
+ 026_2657_697JLYF006647_正常备货_自主品牌_LYDIMOON美白祛痘洗面奶/                            105_6867_697JLYF006673_正常备货_自主品牌_LYDIMOON幽夹舒柔脱毛膏100g/
+ 027_2543_697JLYF006644_正常备货_自主品牌_LYDIMOON益生菌美白牙膏/                            106_1515_697JLYF006627_清库存_自主品牌_LYDIMOON中药肚脐贴/
+ 028_5290_697JLYF006656_正常备货_自主品牌_LYDIMOON烟酰胺熊果苷身体乳/                        107_1516_697JLYF006628_正常备货_自主品牌_LYDIMOON彩盒肚脐贴/
+ 029_4551_JLTH00612886_清库存_通货_毛囊焱炎药膏广雅毛囊宁保健膏1瓶/                          108_4549_JLTH00612883_清库存_通货_脂肪康保健膏30g/
+ 030_1444_697JLYF006618_正常备货_自主品牌_佰氏珍珠洗牙粉-50g/                                109_4550_JLTH00612885_清库存_通货_疣尤优肤平液广雅优肤平膏1盒/
+ 031_4409_JLTH00612871_正常备货_通货_益生菌牙膏【百香果120g】酵素焕白牙膏/                   110_2486_JLTH00612814_正常备货_通货_臻羞抚痕平滑精华霜50g/
+ 032_1404_697JLYF006622_正常备货_自主品牌_IUALLURE纤体塑形霜/                               '111_5516_697JLYF006670_正常备货_自主品牌_LYDIMOON维 C 美白皂'/
+ 033_5298_697JLYF006669_正常备货_自主品牌_LYDIMOON维生素E滋养柔软洁净磨砂膏/                 112_6333_JLTH00612892_正常备货_通货_奶瓶果蔬清洗剂【袋装4ml_20条】/
+'034_5515_697JLYF006667_正常备货_自主品牌_LYDIMOON维生素 E 滋养滋润霜'/                      113_1400_697JLYF006610_清库存_自主品牌_IUALLURE脱毛膏/
+ 035_6345_JLTH00612898_正常备货_通货_为一生洗眼液洗眼液180ML/                               '114_5291_697JLYF006671_正常备货_自主品牌_LYDIMOON维 C 美白霜'/
+ 036_6565_JLTH00612899_清库存_通货_正泰林日文抑菌止痒膏20g/                                  115_1402_697JLYF006616_正常备货_自主品牌_IUALLURE腋窝美白霜/
+ 037_4413_JLTH00612863_正常备货_通货_脱毛蜡纸20贴_10片_20贴_10片/                            116_995_697JLYF006606_正常备货_自主品牌_IUALLURE生姜洗发水/
+ 038_6346_JLTH00612895_清库存_通货_白云山花城鼻通喷剂10ml_瓶/                                117_2616_697JLYF006650_正常备货_自主品牌_LYDIMOON美白祛斑霜/
+ 039_4412_JLTH00612872_正常备货_通货_脱毛喷雾+刮板/                                          118_1519_697JLYF006631_正常备货_自主品牌_IUallure足部按摩精油/
+ 040_2541_697JLYF006642_正常备货_自主品牌_LYDIMOON牙齿美白凝胶笔/                            119_4361_697JLYF006641_正常备货_自主品牌_LYDIMOON素颜霜50g/
+ 041_2652_JLTH00612826_正常备货_通货_凯琳雅叶绿素氨基酸细嫩洁面泥100g/                       120_4384_JLTH00612869_正常备货_通货_IFAST黑灵芝洗发乳200ml/
+ 042_2658_697JLYF006649_正常备货_自主品牌_LYDIMOON洁牙慕斯/                                  121_3624_JLTH00612861_正常备货_通货_Sumifun维E脂肪粒乳20维E护肤净脂肪粒/
+ 043_3621_JLTH00612859_清库存_通货_hih植萃焕颜舒缓花瓣水/                                    122_997_697JLYF006604_正常备货_自主品牌_IUALLURE深海泥洁面奶/
+'044_6349_JLTH00612890_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_15cm 1片_袋'/         123_3041_JLTH00612837_清库存_通货_疣优肤平瘊子去尤点痣膏优肤平膏/
+ 045_5295_697JLYF006654_正常备货_自主品牌_LYDIMOON乳糖酸修复精华液/                         '124_2841_JLTH00612829_清库存_通货_sumifun 速卖通跨境 淋巴保健膏10g'/
+ 046_3152_JLTH00612845_正常备货_通货_大头鸟婴幼儿奥拉氟儿童牙膏蜜桃味/                       125_2615_697JLYF006648_正常备货_自主品牌_LYDIMOON晚安冻膜/
+ 047_2656_697JLYF006646_正常备货_自主品牌_LYDIMOON山羊奶美白沐浴露/                          126_3042_JLTH00612839_清库存_通货_补骨脂白斑抑菌液豫宁美-白斑保健膏30g/
+ 048_5288_697JLYF006668_正常备货_自主品牌_LYDIMOON竹炭撕拉式黑面膜/                          127_2840_JLTH00612828_清库存_通货_Sumifun跨境外贸溢脂性皮炎膏20g/
+ 049_2975_JLTH00612844_正常备货_通货_SOD蜜身体乳SOD蜜【100g】/                               128_3040_JLTH00612836_清库存_通货_点痣膏20g/
+'050_6347_JLTH00612891_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_50cm 1卷_盒'/         129_2972_JLTH00612838_清库存_通货_仙怀堂白癜膏20g/
+ 051_5292_697JLYF006663_正常备货_自主品牌_LYDIMOON视黄醇精华眼部精华液/                      130_1445_697JLYF006625_清库存_自主品牌_佰氏除疤凝露/
+ 052_3157_JLTH00612849_正常备货_通货_儿童面霜50g开咪猫润肤霜（黄色）/                        131_1518_697JLYF006630_正常备货_自主品牌_IUallure防脱育发液/
+ 053_5289_697JLYF006662_正常备货_自主品牌_LYDIMOON视黄醇精华柔滑眼霜/                        132_2259_JLTH00612786_清库存_通货_灸之恋脂肪膏乳白色30g_盒/
+ 054_5517_697JLYF006652_正常备货_自主品牌_LYDIMOON去烟渍美白牙膏/                            133_1520_697JLYF006632_正常备货_自主品牌_LYDIMOON睫毛液滋养液/
+ 055_2542_697JLYF006643_正常备货_自主品牌_LYDIMOON美白干性牙贴（7对装）/                     134_2649_JLTH00612823_清库存_通货_痛风膏35g_盒/
+ 056_1403_697JLYF006619_正常备货_自主品牌_IUALLURE祛痘凝胶精华/                              135_2755_697JLYF006651_正常备货_自主品牌_LYDIMOON角蛋白发膜/
+ 057_4414_JLTH00612866_正常备货_通货_韩瑟皮傲宁胶态硫祛痘霜30g/                              136_2489_JLTH00612817_清库存_通货_翼颜水杨酸毛孔细致霜30g/
+'058_7253_JLTH00612913 新品_正常备货_通货_抗皱眼部精华油10ml'/                               137_2488_JLTH00612816_清库存_通货_翼颜15%壬二酸净颜凝露30g/
+ 059_4386_JLTH00612867_正常备货_通货_Nicor维生素E尿素霜100g/                                 138_3159_JLTH00612851_正常备货_通货_婴儿氨基酸身体乳130ml开咪猫婴童舒柔保湿润肤露紫色/
+ 060_2327_JLTH00612805_正常备货_通货_芙芊姿魅体精华沐浴露330ml/                              139_314_JLTH00612603_正常备货_通货_芙迪男士脱毛膏/
+ 061_5293_697JLYF006664_正常备货_自主品牌_LYDIMOON摩洛哥坚果油柔顺护发素/                    140_2333_JLTH00612799_清库存_通货_梵飞丝维A醇精华液30ml/
+ 062_4553_JLTH00612877_正常备货_通货_黄糖去角质凝胶150mL/                                    141_2332_JLTH00612798_清库存_通货_梵飞丝VC凝颜精华液30ml/
+'063_5514_697JLYF006666_正常备货_自主品牌_LYDIMOON维生素 E 滋养身体乳'/                      142_397_JLTH00612703_正常备货_通货_赋活肌密保湿眼霜20g/
+ 064_2839_JLTH00612834_正常备货_通货_眼部护理液清洁眼部洗眼液200ml/                          143_1346_JLTH00612764_清库存_通货_色娜娜竹炭吸黑头膏60g/
+ 065_5294_697JLYF006659_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱修复乳液/                      144_2261_JLTH00612789_清库存_通货_九福堂优肤平抑菌液10/
+ 066_4411_JLTH00612864_正常备货_通货_脱毛套装【60g+30g】带刮板/                              145_968_JL1284333_清库存_通货_中药肚脐贴/
+ 067_4415_JLTH00612870_正常备货_通货_SOD蜜身体乳SOD蜜【300g】/                               146_384_JLTH00612690_正常备货_通货_胸部护理霜80G/
+'068_7257_JLTH00612914 新品_清库存_通货_脚爽喷剂30ml'/                                       147_1521_697JLYF006633_正常备货_自主品牌_IUALLURE美乳丰胸/
+ 069_6352_JLTH00612894_清库存_通货_咽扁舒冷肤凝胶/                                           148_1286_697JLYF006611_正常备货_自主品牌_IUALLURE美乳霜/
+ 070_6940_697JLYF006676_清库存_自主品牌_脂肪膏/                                              149_2335_JLTH00612812_清库存_通货_小分子熬夜急救精华露30ml/
+ 071_6566_JLTH00612900_清库存_通货_曲张冷肤凝胶20g/                                          150_565_JLTH00612649_正常备货_通货_控油去屑洗发水500ML/
+ 072_1443_697JLYF006609_正常备货_自主品牌_IUALLURE祛痘沐浴乳/                                151_2264_JLTH00612793_正常备货_通货_婴童牛奶洗发沐浴露260ml/
+'073_3619_JLTH00612857_正常备货_通货_BIOAOUA芦荟温和脱毛膏 60g'/                             152_1351_JLTH00612771_清库存_通货_免洗头发喷雾150ml/
+ 074_6941_697JLYF006679_正常备货_自主品牌_瘦胳膊膏/                                          153_1353_JLTH00612774_清库存_通货_亚玛丽小苏打亮白牙膏210g/
+'075_7254_JLTH00612908 新品_清库存_通货_儿童祛痱止痒膏'/                                     154_1029_JLTH00612711_清库存_通货_伊露莹洗发水500ml/
+ 076_6945_697JLYF006683紧致_正常备货_自主品牌_妊娠纹膏/                                      155_2336_JLTH00612811_清库存_通货_O-ZONE_欧志姆香草薄荷牙膏100g/
+'077_7252_JLTH00612915 新品_正常备货_通货_日本再生硅口腔抑菌牙膏 gleiser再生硅-100克'/       156_2655_JLTH00612822_清库存_通货_静脉型曲张膏冷敷凝胶20g一支/
+ 078_6942_697JLYF006680_清库存_自主品牌_去疣膏/                                              157_1147_JLTH00612756_清库存_通货_aichun美乳霜/
+'079_7256_JLTH00612912 新品_正常备货_通货_薄荷口腔喷雾10ml（新）'/                           158_1340_JLTH00612776_清库存_通货_爱臣美鼻养护精华油10ml/
+
+./output/product_manage_TK/001_4556_JLTH00612880_正常备货_通货_儿童防晒喷雾:
+
+./output/product_manage_TK/002_3162_JLTH00612855_正常备货_通货_皇家儿童防晒喷雾120ml:
+
+./output/product_manage_TK/003_4555_JLTH00612879_正常备货_通货_皇家婴童儿童防晒霜圆防晒SPF40PA+++:
+
+'./output/product_manage_TK/004_6350_JLTH00612893_正常备货_通货_South Moon 草本身体护理喷雾30ml':
+
+./output/product_manage_TK/005_3153_JLTH00612846_正常备货_通货_大头鸟儿童益生菌皓齿牙膏草莓味:
+
+./output/product_manage_TK/006_2843_JLTH00612831_正常备货_通货_SADOER椰子沐浴露500ml:
+
+./output/product_manage_TK/007_5297_697JLYF006655_正常备货_自主品牌_LYDIMOON烟酰胺美白修复精华液:
+
+./output/product_manage_TK/008_3154_JLTH00612847_正常备货_通货_大头鸟溶菌酶儿童健齿牙膏溶菌酶牙膏200g:
+
+./output/product_manage_TK/009_1068_JLTH00612730_正常备货_通货_德德维芙舒缓修护乳:
+
+./output/product_manage_TK/010_3155_JLTH00612848_正常备货_通货_大头鸟儿童清爽洁净洗发沐浴露1000ml:
+
+./output/product_manage_TK/011_4552_JLTH00612884_正常备货_通货_明澄雅美白沐浴露300ml瓶:
+
+./output/product_manage_TK/012_3156_JLTH00612854_正常备货_通货_大头鸟婴幼儿口腔清洁喷雾草莓味-备护型:
+
+./output/product_manage_TK/013_2973_JLTH00612840_正常备货_通货_胶肽硫精华液50ml_瓶:
+
+./output/product_manage_TK/014_3163_JLTH00612856_正常备货_通货_美度防脱育发洗发露500ml防脱洗发水:
+
+./output/product_manage_TK/015_2490_JLTH00612818_正常备货_通货_指甲液30ml+锉刀+创可贴4张+棉签4根:
+
+./output/product_manage_TK/016_5296_697JLYF006661_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱眼霜:
+
+./output/product_manage_TK/017_5518_697JLYF006653_正常备货_自主品牌_LYDIMOON去咖啡茶渍美白牙膏:
+
+'./output/product_manage_TK/018_4387_JLTH00612868_正常备货_通货_澳芙雪377次抛嫩白祛斑精华液 1.5ml_10支_盒':
+
+./output/product_manage_TK/019_4554_JLTH00612878_正常备货_通货_【利贝婴儿】倍护防皴霜50g（补水锁水，倍润防皴）:
+
+./output/product_manage_TK/020_5519_697JLYF006660_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱修复身体乳:
+
+./output/product_manage_TK/021_5287_697JLYF006665_正常备货_自主品牌_LYDIMOON摩洛哥坚果油柔顺洁净洗发水:
+
+./output/product_manage_TK/022_4410_JLTH00612875_正常备货_通货_耿博士B5水杨酸面膜耿博士维生素原B5水杨酸净澈面膜:
+
+'./output/product_manage_TK/023_3623_JLTH00612862_正常备货_通货_澳芙雪377嫩白祛斑精华液 30ml_瓶':
+
+./output/product_manage_TK/024_996_697JLYF006605_正常备货_自主品牌_IUALLURE脱毛喷雾:
+
+'./output/product_manage_TK/025_6660_JLTH00612905_正常备货_自主品牌_FrstBaby BABY HAIR LOTION   （护理生发液）_30ml':
+
+./output/product_manage_TK/026_2657_697JLYF006647_正常备货_自主品牌_LYDIMOON美白祛痘洗面奶:
+
+./output/product_manage_TK/027_2543_697JLYF006644_正常备货_自主品牌_LYDIMOON益生菌美白牙膏:
+
+./output/product_manage_TK/028_5290_697JLYF006656_正常备货_自主品牌_LYDIMOON烟酰胺熊果苷身体乳:
+
+./output/product_manage_TK/029_4551_JLTH00612886_清库存_通货_毛囊焱炎药膏广雅毛囊宁保健膏1瓶:
+
+./output/product_manage_TK/030_1444_697JLYF006618_正常备货_自主品牌_佰氏珍珠洗牙粉-50g:
+
+./output/product_manage_TK/031_4409_JLTH00612871_正常备货_通货_益生菌牙膏【百香果120g】酵素焕白牙膏:
+
+./output/product_manage_TK/032_1404_697JLYF006622_正常备货_自主品牌_IUALLURE纤体塑形霜:
+
+./output/product_manage_TK/033_5298_697JLYF006669_正常备货_自主品牌_LYDIMOON维生素E滋养柔软洁净磨砂膏:
+
+'./output/product_manage_TK/034_5515_697JLYF006667_正常备货_自主品牌_LYDIMOON维生素 E 滋养滋润霜':
+
+./output/product_manage_TK/035_6345_JLTH00612898_正常备货_通货_为一生洗眼液洗眼液180ML:
+
+./output/product_manage_TK/036_6565_JLTH00612899_清库存_通货_正泰林日文抑菌止痒膏20g:
+
+./output/product_manage_TK/037_4413_JLTH00612863_正常备货_通货_脱毛蜡纸20贴_10片_20贴_10片:
+
+./output/product_manage_TK/038_6346_JLTH00612895_清库存_通货_白云山花城鼻通喷剂10ml_瓶:
+
+./output/product_manage_TK/039_4412_JLTH00612872_正常备货_通货_脱毛喷雾+刮板:
+
+./output/product_manage_TK/040_2541_697JLYF006642_正常备货_自主品牌_LYDIMOON牙齿美白凝胶笔:
+
+./output/product_manage_TK/041_2652_JLTH00612826_正常备货_通货_凯琳雅叶绿素氨基酸细嫩洁面泥100g:
+
+./output/product_manage_TK/042_2658_697JLYF006649_正常备货_自主品牌_LYDIMOON洁牙慕斯:
+
+./output/product_manage_TK/043_3621_JLTH00612859_清库存_通货_hih植萃焕颜舒缓花瓣水:
+
+'./output/product_manage_TK/044_6349_JLTH00612890_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_15cm 1片_袋':
+
+./output/product_manage_TK/045_5295_697JLYF006654_正常备货_自主品牌_LYDIMOON乳糖酸修复精华液:
+
+./output/product_manage_TK/046_3152_JLTH00612845_正常备货_通货_大头鸟婴幼儿奥拉氟儿童牙膏蜜桃味:
+
+./output/product_manage_TK/047_2656_697JLYF006646_正常备货_自主品牌_LYDIMOON山羊奶美白沐浴露:
+
+./output/product_manage_TK/048_5288_697JLYF006668_正常备货_自主品牌_LYDIMOON竹炭撕拉式黑面膜:
+
+./output/product_manage_TK/049_2975_JLTH00612844_正常备货_通货_SOD蜜身体乳SOD蜜【100g】:
+
+'./output/product_manage_TK/050_6347_JLTH00612891_正常备货_通货_疤痕贴亚马逊医用硅凝胶英文疤痕贴4_50cm 1卷_盒':
+
+./output/product_manage_TK/051_5292_697JLYF006663_正常备货_自主品牌_LYDIMOON视黄醇精华眼部精华液:
+
+./output/product_manage_TK/052_3157_JLTH00612849_正常备货_通货_儿童面霜50g开咪猫润肤霜（黄色）:
+
+./output/product_manage_TK/053_5289_697JLYF006662_正常备货_自主品牌_LYDIMOON视黄醇精华柔滑眼霜:
+
+./output/product_manage_TK/054_5517_697JLYF006652_正常备货_自主品牌_LYDIMOON去烟渍美白牙膏:
+
+./output/product_manage_TK/055_2542_697JLYF006643_正常备货_自主品牌_LYDIMOON美白干性牙贴（7对装）:
+
+./output/product_manage_TK/056_1403_697JLYF006619_正常备货_自主品牌_IUALLURE祛痘凝胶精华:
+
+./output/product_manage_TK/057_4414_JLTH00612866_正常备货_通货_韩瑟皮傲宁胶态硫祛痘霜30g:
+
+'./output/product_manage_TK/058_7253_JLTH00612913 新品_正常备货_通货_抗皱眼部精华油10ml':
+
+./output/product_manage_TK/059_4386_JLTH00612867_正常备货_通货_Nicor维生素E尿素霜100g:
+
+./output/product_manage_TK/060_2327_JLTH00612805_正常备货_通货_芙芊姿魅体精华沐浴露330ml:
+
+./output/product_manage_TK/061_5293_697JLYF006664_正常备货_自主品牌_LYDIMOON摩洛哥坚果油柔顺护发素:
+
+./output/product_manage_TK/062_4553_JLTH00612877_正常备货_通货_黄糖去角质凝胶150mL:
+
+'./output/product_manage_TK/063_5514_697JLYF006666_正常备货_自主品牌_LYDIMOON维生素 E 滋养身体乳':
+
+./output/product_manage_TK/064_2839_JLTH00612834_正常备货_通货_眼部护理液清洁眼部洗眼液200ml:
+
+./output/product_manage_TK/065_5294_697JLYF006659_正常备货_自主品牌_LYDIMOON胶原蛋白抗皱修复乳液:
+
+./output/product_manage_TK/066_4411_JLTH00612864_正常备货_通货_脱毛套装【60g+30g】带刮板:
+
+./output/product_manage_TK/067_4415_JLTH00612870_正常备货_通货_SOD蜜身体乳SOD蜜【300g】:
+
+'./output/product_manage_TK/068_7257_JLTH00612914 新品_清库存_通货_脚爽喷剂30ml':
+
+./output/product_manage_TK/069_6352_JLTH00612894_清库存_通货_咽扁舒冷肤凝胶:
+
+./output/product_manage_TK/070_6940_697JLYF006676_清库存_自主品牌_脂肪膏:
+
+./output/product_manage_TK/071_6566_JLTH00612900_清库存_通货_曲张冷肤凝胶20g:
+
+./output/product_manage_TK/072_1443_697JLYF006609_正常备货_自主品牌_IUALLURE祛痘沐浴乳:
+
+'./output/product_manage_TK/073_3619_JLTH00612857_正常备货_通货_BIOAOUA芦荟温和脱毛膏 60g':
+
+./output/product_manage_TK/074_6941_697JLYF006679_正常备货_自主品牌_瘦胳膊膏:
+
+'./output/product_manage_TK/075_7254_JLTH00612908 新品_清库存_通货_儿童祛痱止痒膏':
+
+./output/product_manage_TK/076_6945_697JLYF006683紧致_正常备货_自主品牌_妊娠纹膏:
+
+'./output/product_manage_TK/077_7252_JLTH00612915 新品_正常备货_通货_日本再生硅口腔抑菌牙膏 gleiser再生硅-100克':
+
+./output/product_manage_TK/078_6942_697JLYF006680_清库存_自主品牌_去疣膏:
+
+'./output/product_manage_TK/079_7256_JLTH00612912 新品_正常备货_通货_薄荷口腔喷雾10ml（新）':
+
+./output/product_manage_TK/080_6944_697JLYF006682_清库存_自主品牌_褥疮膏:
+
+'./output/product_manage_TK/081_7259_JLTH00612906 新品_正常备货_通货_日本益生菌亮白牙粉':
+
+./output/product_manage_TK/082_6943_697JLYF006681_清库存_自主品牌_硫磺膏:
+
+'./output/product_manage_TK/083_4548_JLTH00612882_正常备货_通货_OUHOE 身体焕白霜100g':
+
+./output/product_manage_TK/084_6939_697JLYF006677_清库存_自主品牌_甲状康膏:
+
+'./output/product_manage_TK/085_3622_JLTH00612860_正常备货_通货_澳芙雪377美白祛斑面霜 50g_瓶':
+
+./output/product_manage_TK/086_6348_JLTH00612896_正常备货_通货_【蓝莓叶黄素】眼部护理液12ml:
+
+./output/product_manage_TK/087_6938_697JLYF006678_清库存_自主品牌_白斑净膏:
+
+./output/product_manage_TK/088_4547_JLTH00612881_正常备货_通货_韩美肌麦角硫因灵芝凝时抗皱霜:
+
+./output/product_manage_TK/089_3039_JLTH00612835_清库存_通货_肤康百草止痒膏乳膏30g肤康瓶装:
+
+./output/product_manage_TK/090_1405_697JLYF006608_正常备货_自主品牌_IUALLURE脱毛慕斯:
+
+'./output/product_manage_TK/091_7251_JLTH00612911 新品_正常备货_通货_柠檬去角质啫喱100ml':
+
+'./output/product_manage_TK/092_7250_JLTH00612910 新品_正常备货_通货_二硫化硒去屑洗发水':
+
+./output/product_manage_TK/093_326_JLTH00612642_正常备货_通货_乳木果磨砂膏250g:
+
+'./output/product_manage_TK/094_7255_JLTH00612909 新品_清库存_通货_坂枝野寻足跟痛外用药贴':
+
+./output/product_manage_TK/095_6868_697JLYF006674_正常备货_自主品牌_LYDIMOON植物舒缓精华乳:
+
+./output/product_manage_TK/096_6351_JLTH00612897_正常备货_通货_伊喜畅5%碳酸氢钠溶液外阴清洗液250ml_瓶:
+
+'./output/product_manage_TK/097_6594_JLTH00612904_正常备货_通货_染发剂 栗棕色230ml':
+
+'./output/product_manage_TK/098_6593_JLTH00612903_正常备货_通货_染发剂 自然黑色230ml':
+
+'./output/product_manage_TK/099_2974_JLTH00612843_正常备货_通货_额头贴抬头纹额头贴 一盒（10片）':
+
+./output/product_manage_TK/100_1401_697JLYF006614_正常备货_自主品牌_IUALLURE草本精华眼霜:
+
+'./output/product_manage_TK/101_7258_JLTH00612907 新品_正常备货_通货_SADOER硫磺除螨沐浴露500ml':
+
+'./output/product_manage_TK/102_2267_JLTH00612785_清库存_通货_湿疹瘙痒皮肤外用膏 20g':
+
+./output/product_manage_TK/103_3158_JLTH00612850_正常备货_通货_婴儿爽身粉玉米痱子粉140g婴童玉米爽身粉（紫色）:
+
+./output/product_manage_TK/104_1067_JLTH00612729_正常备货_通货_德德维芙老款瓶装脱毛膏:
+
+./output/product_manage_TK/105_6867_697JLYF006673_正常备货_自主品牌_LYDIMOON幽夹舒柔脱毛膏100g:
+
+./output/product_manage_TK/106_1515_697JLYF006627_清库存_自主品牌_LYDIMOON中药肚脐贴:
+
+./output/product_manage_TK/107_1516_697JLYF006628_正常备货_自主品牌_LYDIMOON彩盒肚脐贴:
+
+./output/product_manage_TK/108_4549_JLTH00612883_清库存_通货_脂肪康保健膏30g:
+
+./output/product_manage_TK/109_4550_JLTH00612885_清库存_通货_疣尤优肤平液广雅优肤平膏1盒:
+
+./output/product_manage_TK/110_2486_JLTH00612814_正常备货_通货_臻羞抚痕平滑精华霜50g:
+
+'./output/product_manage_TK/111_5516_697JLYF006670_正常备货_自主品牌_LYDIMOON维 C 美白皂':
+
+./output/product_manage_TK/112_6333_JLTH00612892_正常备货_通货_奶瓶果蔬清洗剂【袋装4ml_20条】:
+
+./output/product_manage_TK/113_1400_697JLYF006610_清库存_自主品牌_IUALLURE脱毛膏:
+
+'./output/product_manage_TK/114_5291_697JLYF006671_正常备货_自主品牌_LYDIMOON维 C 美白霜':
+
+./output/product_manage_TK/115_1402_697JLYF006616_正常备货_自主品牌_IUALLURE腋窝美白霜:
+
+./output/product_manage_TK/116_995_697JLYF006606_正常备货_自主品牌_IUALLURE生姜洗发水:
+
+./output/product_manage_TK/117_2616_697JLYF006650_正常备货_自主品牌_LYDIMOON美白祛斑霜:
+
+./output/product_manage_TK/118_1519_697JLYF006631_正常备货_自主品牌_IUallure足部按摩精油:
+
+./output/product_manage_TK/119_4361_697JLYF006641_正常备货_自主品牌_LYDIMOON素颜霜50g:
+
+./output/product_manage_TK/120_4384_JLTH00612869_正常备货_通货_IFAST黑灵芝洗发乳200ml:
+
+./output/product_manage_TK/121_3624_JLTH00612861_正常备货_通货_Sumifun维E脂肪粒乳20维E护肤净脂肪粒:
+
+./output/product_manage_TK/122_997_697JLYF006604_正常备货_自主品牌_IUALLURE深海泥洁面奶:
+
+./output/product_manage_TK/123_3041_JLTH00612837_清库存_通货_疣优肤平瘊子去尤点痣膏优肤平膏:
+
+'./output/product_manage_TK/124_2841_JLTH00612829_清库存_通货_sumifun 速卖通跨境 淋巴保健膏10g':
+
+./output/product_manage_TK/125_2615_697JLYF006648_正常备货_自主品牌_LYDIMOON晚安冻膜:
+
+./output/product_manage_TK/126_3042_JLTH00612839_清库存_通货_补骨脂白斑抑菌液豫宁美-白斑保健膏30g:
+
+./output/product_manage_TK/127_2840_JLTH00612828_清库存_通货_Sumifun跨境外贸溢脂性皮炎膏20g:
+
+./output/product_manage_TK/128_3040_JLTH00612836_清库存_通货_点痣膏20g:
+
+./output/product_manage_TK/129_2972_JLTH00612838_清库存_通货_仙怀堂白癜膏20g:
+
+./output/product_manage_TK/130_1445_697JLYF006625_清库存_自主品牌_佰氏除疤凝露:
+
+./output/product_manage_TK/131_1518_697JLYF006630_正常备货_自主品牌_IUallure防脱育发液:
+
+./output/product_manage_TK/132_2259_JLTH00612786_清库存_通货_灸之恋脂肪膏乳白色30g_盒:
+
+./output/product_manage_TK/133_1520_697JLYF006632_正常备货_自主品牌_LYDIMOON睫毛液滋养液:
+
+./output/product_manage_TK/134_2649_JLTH00612823_清库存_通货_痛风膏35g_盒:
+
+./output/product_manage_TK/135_2755_697JLYF006651_正常备货_自主品牌_LYDIMOON角蛋白发膜:
+
+./output/product_manage_TK/136_2489_JLTH00612817_清库存_通货_翼颜水杨酸毛孔细致霜30g:
+
+./output/product_manage_TK/137_2488_JLTH00612816_清库存_通货_翼颜15%壬二酸净颜凝露30g:
+
+./output/product_manage_TK/138_3159_JLTH00612851_正常备货_通货_婴儿氨基酸身体乳130ml开咪猫婴童舒柔保湿润肤露紫色:
+
+./output/product_manage_TK/139_314_JLTH00612603_正常备货_通货_芙迪男士脱毛膏:
+
+./output/product_manage_TK/140_2333_JLTH00612799_清库存_通货_梵飞丝维A醇精华液30ml:
+
+./output/product_manage_TK/141_2332_JLTH00612798_清库存_通货_梵飞丝VC凝颜精华液30ml:
+
+./output/product_manage_TK/142_397_JLTH00612703_正常备货_通货_赋活肌密保湿眼霜20g:
+
+./output/product_manage_TK/143_1346_JLTH00612764_清库存_通货_色娜娜竹炭吸黑头膏60g:
+
+./output/product_manage_TK/144_2261_JLTH00612789_清库存_通货_九福堂优肤平抑菌液10:
+
+./output/product_manage_TK/145_968_JL1284333_清库存_通货_中药肚脐贴:
+
+./output/product_manage_TK/146_384_JLTH00612690_正常备货_通货_胸部护理霜80G:
+
+./output/product_manage_TK/147_1521_697JLYF006633_正常备货_自主品牌_IUALLURE美乳丰胸:
+
+./output/product_manage_TK/148_1286_697JLYF006611_正常备货_自主品牌_IUALLURE美乳霜:
+
+./output/product_manage_TK/149_2335_JLTH00612812_清库存_通货_小分子熬夜急救精华露30ml:
+
+./output/product_manage_TK/150_565_JLTH00612649_正常备货_通货_控油去屑洗发水500ML:
+
+./output/product_manage_TK/151_2264_JLTH00612793_正常备货_通货_婴童牛奶洗发沐浴露260ml:
+
+./output/product_manage_TK/152_1351_JLTH00612771_清库存_通货_免洗头发喷雾150ml:
+
+./output/product_manage_TK/153_1353_JLTH00612774_清库存_通货_亚玛丽小苏打亮白牙膏210g:
+
+./output/product_manage_TK/154_1029_JLTH00612711_清库存_通货_伊露莹洗发水500ml:
+
+./output/product_manage_TK/155_2336_JLTH00612811_清库存_通货_O-ZONE_欧志姆香草薄荷牙膏100g:
+
+./output/product_manage_TK/156_2655_JLTH00612822_清库存_通货_静脉型曲张膏冷敷凝胶20g一支:
+
+./output/product_manage_TK/157_1147_JLTH00612756_清库存_通货_aichun美乳霜:
+
+./output/product_manage_TK/158_1340_JLTH00612776_清库存_通货_爱臣美鼻养护精华油10ml:
+
+./product_selection_analysis.git:
+HEAD  config  description  hooks/  info/  objects/  packed-refs  refs/
+
+./product_selection_analysis.git/hooks:
+applypatch-msg.sample*  fsmonitor-watchman.sample*  pre-applypatch.sample*  pre-merge-commit.sample*  pre-rebase.sample*   prepare-commit-msg.sample*  sendemail-validate.sample*
+commit-msg.sample*      post-update.sample*         pre-commit.sample*      pre-push.sample*          pre-receive.sample*  push-to-checkout.sample*    update.sample*
+
+./product_selection_analysis.git/info:
+exclude  refs
+
+./product_selection_analysis.git/objects:
+info/  pack/
+
+./product_selection_analysis.git/objects/info:
+commit-graph  packs
+
+./product_selection_analysis.git/objects/pack:
+pack-5ec06c09134ab0a3d8b75f8b19847ff95535f162.bitmap  pack-5ec06c09134ab0a3d8b75f8b19847ff95535f162.idx  pack-5ec06c09134ab0a3d8b75f8b19847ff95535f162.pack  pack-5ec06c09134ab0a3d8b75f8b19847ff95535f162.rev
+
+./product_selection_analysis.git/refs:
+heads/  tags/
+
+./product_selection_analysis.git/refs/heads:
+
+./product_selection_analysis.git/refs/tags:
+
+./product_selection_analysis_mirror.git:
+HEAD  config  description  hooks/  info/  objects/  packed-refs  refs/
+
+./product_selection_analysis_mirror.git/hooks:
+applypatch-msg.sample*  fsmonitor-watchman.sample*  pre-applypatch.sample*  pre-merge-commit.sample*  pre-rebase.sample*   prepare-commit-msg.sample*  sendemail-validate.sample*
+commit-msg.sample*      post-update.sample*         pre-commit.sample*      pre-push.sample*          pre-receive.sample*  push-to-checkout.sample*    update.sample*
+
+./product_selection_analysis_mirror.git/info:
+exclude
+
+./product_selection_analysis_mirror.git/objects:
+info/  pack/
+
+./product_selection_analysis_mirror.git/objects/info:
+commit-graph  packs
+
+./product_selection_analysis_mirror.git/objects/pack:
+pack-5ec06c09134ab0a3d8b75f8b19847ff95535f162.bitmap  pack-5ec06c09134ab0a3d8b75f8b19847ff95535f162.idx  pack-5ec06c09134ab0a3d8b75f8b19847ff95535f162.pack  pack-5ec06c09134ab0a3d8b75f8b19847ff95535f162.rev
+
+./product_selection_analysis_mirror.git/refs:
+heads/  tags/
+
+./product_selection_analysis_mirror.git/refs/heads:
+
+./product_selection_analysis_mirror.git/refs/tags:
+
+A_A@DESKTOP-N6C4M46 MINGW64 /c/D/Auser/public/jingluo/product_selection_analysis (main)
