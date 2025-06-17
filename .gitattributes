@@ -1,0 +1,17 @@
+# .gitattributes for Product Selection Analysis
+# Version: v1.4.0
+# Last update: 2025-06-13
+
+# Ensure consistent text files
+* text=auto eol=lf
+
+# Explicitly set language for GitHub linguist
+*.py linguist-language=Python
+*.md linguist-language=Markdown
+*.yaml linguist-language=YAML
+*.yml linguist-language=YAML
+*.txt linguist-language=Text
+
+# Exclude raw_data from linguist stats
+raw_data_* linguist-vendored
+market_rule/*.csv linguist-vendored

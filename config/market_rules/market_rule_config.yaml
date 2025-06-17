@@ -1,0 +1,13 @@
+ID:
+  rule_table_path: "config/market_rules/market_rule_config_ID.csv"
+  keyword_col: "关键词"
+  rule_cols:
+    - "是否禁售"
+    - "禁售原因"
+
+TH:
+  rule_table_path: "config/market_rules/market_rule_config_TH.csv"
+  keyword_col: "关键词"
+  rule_cols:
+    - "是否禁售"
+    - "禁售原因"

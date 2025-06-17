@@ -1,0 +1,22 @@
+compatibility: v1.x
+description: 选品分析增强版 V1.4.2 - 支持市场规则初步集成
+<<<<<<< HEAD
+last_run_date: '2025-06-13 13:53:11'
+=======
+last_run_date: '2025-06-13 04:52:40'
+>>>>>>> 13c0f29f4588310ec1ec962f7b6a40d8c4f31b53
+update_date: 2025-06-13
+update_log:
+- 初始化标准版 version_info.yaml 模板
+- 引入 version_info.yaml / run_config.yaml 配置管理
+- trend_keywords 支持配置文件
+- run_selection_analysis.py 支持灵活配置路径
+- 剔除异常 Shopee毛利率 行
+- 修正 SKU评分 无价值列逻辑
+- 增加编号新品优先权重字段
+- 上新优先级公式优化
+- 选品结果增加 export 英文命名
+- 补充 README.md
+- 预留 future_roadmap.md
+- 集成市场规则初步功能（V1.4.x 开始）
+version: 1.4.2
