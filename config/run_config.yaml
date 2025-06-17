@@ -1,33 +1,29 @@
 # 📦 run_config.yaml 配置文件
-# 用于配置多市场的产品选品分析任务，支持路径模板化、通用设置与扩展性优化
 
-# ✅ 通用基础配置（由所有市场共用）
 base:
-  platform: shopee                  # 电商平台（如 Shopee、Lazada 等）
-  category: 通货                    # 商品品类分类
-  output_dir: output                # 默认输出目录
-  input_glob: table_1*.csv          # 输入文件名匹配规则
-  numeric_cols:                     # 数值列字段，便于清洗分析
+  platform: shopee
+  category: 通货
+  output_dir: output
+  input_glob: table_1*.csv
+  numeric_cols:
     - 本期采购价
     - 国内运费
     - 国际运费
     - 仓库操作费
-  common_path_template:            # 使用模板字段构建路径（按市场 code）
-    trend_keyword_file: config/trend_keywords/trend_keywords_{code}.txt
+  common_path_template:
+    trend_keywords_file: config/trend_keywords/trend_keywords_{code}.txt
     input_dir: input/raw_data_{code}
     market_rule_table_csv: config/market_rules/market_rule_config_{code}.csv
 
-# 🌍 多市场配置（只需指定国家简码 code，其余路径将自动生成）
 markets:
-  - code: ID   # 印尼
-  - code: TH   # 泰国
-  - code: MY   # 马来西亚
-  - code: VN   # 越南
-  - code: SG   # 新加坡
-  - code: PH   # 菲律宾
-  - code: HK   # 中国香港
-  - code: MO   # 中国澳门
-  - code: TW   # 中国台湾
+  - code: ID
+  - code: TH
+  - code: MY
+  - code: VN
+  - code: SG
+  - code: PH
+  - code: HK
+  - code: MO
+  - code: TW
 
-# 🕒 最近一次运行时间（可由主程序自动更新）
 last_run_date: "2025-06-18"

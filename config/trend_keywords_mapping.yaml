@@ -1,9 +1,0 @@
-mapping:
-#  TH: trend_keywords_TH.txt  # 泰国的趋势关键词文件
-  ID: trend_keywords_ID.txt  # 印尼的趋势关键词文件
-#  MY: trend_keywords_MY.txt  # 马来西亚的趋势关键词文件
-#  PH: trend_keywords_PH.txt  # 菲律宾的趋势关键词文件
-#  VN: trend_keywords_VN.txt  # 越南的趋势关键词文件
-#  SG: trend_keywords_SG.txt  # 新加坡的趋势关键词文件
-#  TW: trend_keywords_TW.txt  # 台湾的趋势关键词文件
-#  RU: trend_keywords_RU.txt  # 俄罗斯的趋势关键词文件

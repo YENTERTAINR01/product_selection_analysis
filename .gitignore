@@ -1,72 +1,34 @@
-# === Python 基本忽略项 ===
-__pycache__/
-*.py[cod]
-*.pyo
-*.so
-*.ipynb_checkpoints/
-
-# === IDE / 编辑器 ===
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# === 环境文件 ===
-.env
-*.env
-.venv/
-venv/
-*.egg-info/
-
-# === 系统文件 ===
+# 系统 & IDE 临时文件
 .DS_Store
-Thumbs.db
-desktop.ini
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
-# === 临时文件 ===
-*.log
-*.bak
-*.swp
-*.tmp
-*.lock
-*.old
-nohup.out
+# 虚拟环境
+env/
+venv/
 
-# === 项目数据目录 ===
-# 输入原始数据（敏感）
-input/raw_data_*/
-raw_data_*/
+# Jupyter Notebook 临时缓存
+.ipynb_checkpoints/
+*.ipynb
 
-# 输出文件
+# 输出与数据文件（不要上传）
+input/
 output/
-product_selection_analysis_result/
-product_selection_results.xlsx
-priority_products_*.csv
-*.gif
-*.mp4
-*.png
-*.jpg
-*.jpeg
+*.csv
+*.xlsx
+*.xls
+*.txt
+*.log
 
-# 配置文件（本地）
-config/local_*.yaml
-config/local_*.json
+# 配置文件（可能含私密信息）
+config/*.yaml
+config/*.yml
+config/*.json
+config/*.bak
 
-# Markdown缓存与分析生成结果
-*.md~
-README.md~
-future_roadmap.md~
-
-# === 压缩和导出文件 ===
-*.zip
-*.tar.gz
-*.7z
-*.rar
-
-# === Jupyter Notebook 临时导出 ===
-*.nbconvert.ipynb
-*.nb.html
-*.pdf
-
-# === Git自身 ===
-*.orig
+# 测试缓存
+.cache/

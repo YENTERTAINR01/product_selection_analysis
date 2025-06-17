@@ -1,94 +1,63 @@
+# 文件：run_selection_analysis.py
 import os
 import logging
-import yaml
-import glob
-import pandas as pd
+import yaml  # ✅ 替换 ConfigParser
 
-
-def load_config(path="config/run_config.yaml"):
-    with open(path, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f)
-
-
-def expand_market_configs(config):
-    base = config.get("base", {})
-    template = base.get("common_path_template", {})
-    expanded = []
-
-    for market in config.get("markets", []):
-        code = market["code"]
-        merged = {**base, **market}
-        merged["country_code"] = code  # backward compatibility
-
-        # 自动展开模板路径
-        for k, v in template.items():
-            merged[k] = v.replace("{code}", code)
-
-        expanded.append(merged)
-    return expanded
-
-
-def load_trend_keywords(file_path):
-    if not os.path.exists(file_path):
-        logging.warning(f"趋势关键词文件不存在: {file_path}")
-        return []
-    with open(file_path, "r", encoding="utf-8") as f:
-        return [line.strip() for line in f if line.strip()]
-
-
-def apply_market_rules(df, csv_path):
-    if not os.path.exists(csv_path):
-        logging.warning(f"市场规则文件不存在: {csv_path}")
-        return df
-    rules_df = pd.read_csv(csv_path)
-    return df  # TODO: 实现具体规则逻辑
-
-
-def filter_by_trend_keywords(df, keywords):
-    if "关键词" not in df.columns:
-        return df
-    return df[df["关键词"].apply(lambda x: any(k in str(x) for k in keywords))]
-
-
-def run_for_market(market_config: dict):
-    code = market_config["code"]
-    raw_data_dir = market_config["raw_data_dir"]
-    input_glob = market_config["input_glob"]
-    output_dir = market_config["output_dir"]
-    trend_keywords_file = market_config["trend_keywords_file"]
-    market_rule_csv = market_config["market_rule_table_csv"]
-
-    os.makedirs(output_dir, exist_ok=True)
-
-    files = glob.glob(os.path.join(raw_data_dir, input_glob))
-    if not files:
-        logging.warning(f"[{code}] 未找到匹配文件: {input_glob}")
-        return
-
-    input_file = max(files, key=os.path.getmtime)
-    logging.info(f"[{code}] 加载数据文件: {input_file}")
-
-    df = pd.read_csv(input_file, encoding="utf-8")
-    df = apply_market_rules(df, market_rule_csv)
-
-    trend_keywords = load_trend_keywords(trend_keywords_file)
-    df = filter_by_trend_keywords(df, trend_keywords)
-
-    output_path = os.path.join(output_dir, f"filtered_{code}.xlsx")
-    df.to_excel(output_path, index=False)
-    logging.info(f"[{code}] 已保存筛选结果: {output_path}")
+from src.selection_analysis.selection_pipeline import run_selection_for_market
+from src.keyword_analysis.run_market_analysis import analyze_market
+from src.utils.save_product_folders import save_product_folders
 
 
 def main():
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-    config = load_config()
-    markets = expand_market_configs(config)
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(levelname)s - %(message)s",
+        handlers=[logging.StreamHandler()],
+    )
 
-    for market in markets:
-        try:
-            run_for_market(market)
-        except Exception as e:
-            logging.exception(f"[{market.get('code', '?')}] 分析失败: {e}")
+    # ✅ 使用 PyYAML 读取配置文件
+    with open("config/run_config.yaml", "r", encoding="utf-8") as f:
+        config = yaml.safe_load(f)
+
+    markets = ["ID", "TH", "MY", "VN", "SG", "PH", "HK", "MO", "TW"]
+    processed = []
+    missing = []
+
+    for market_code in markets:
+        input_dir = os.path.join("input", f"raw_data_{market_code}")
+        output_dir = os.path.join("output")
+        output_csv = os.path.join(output_dir, f"priority_products_{market_code}.csv")
+        keyword_output_dir = output_dir
+
+        if not os.path.exists(input_dir):
+            logging.warning(f"[{market_code}] 未找到匹配文件: table_1*.csv")
+            missing.append(market_code)
+            continue
+
+        logging.info(f"[{market_code}] 使用输入路径: {input_dir}")
+        df = run_selection_for_market(market_code, input_dir, output_csv)
+
+        if df is not None:
+            processed.append(market_code)
+
+            # 关键词分析
+            keywords_path = os.path.join("config", "trend_keywords", f"trend_keywords_{market_code}.txt")
+            stopwords_path = os.path.join("config", "trend_keywords", "stopwords.txt")
+            analyze_market(output_csv, market_code, keywords_path, stopwords_path, output_dir)
+
+            # ✅ 新增：创建产品文件夹
+            try:
+                save_product_folders(df, market_code, base_output_dir=output_dir)
+                logging.info(f"[{market_code}] 产品资料目录创建成功")
+            except Exception as e:
+                logging.error(f"[{market_code}] 产品资料目录生成失败: {e}")
+
+    # 总结
+    logging.info("\n" + "=" * 60)
+    logging.info(f"✅ 处理国家数：{len(markets)}")
+    logging.info(f"📦 有数据国家：{processed}")
+    logging.info(f"❌ 无数据国家：{missing}")
+    logging.info("=" * 60)
 
 
 if __name__ == "__main__":
