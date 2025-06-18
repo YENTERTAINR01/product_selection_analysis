@@ -1,0 +1,7 @@
+├── scripts
+│   generate_tree.py
+│   ls_R.txt
+│   run_selection_analysis.py
+│   ├── archive
+│   │   run_init_structure.py
+│   │   switch_to_main.sh

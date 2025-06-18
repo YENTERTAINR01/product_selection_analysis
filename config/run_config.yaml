@@ -15,6 +15,18 @@ base:
     input_dir: input/raw_data_{code}
     market_rule_table_csv: config/market_rules/market_rule_config_{code}.csv
 
+# 新增：要处理的国家列表
+country_list:
+  - ID
+  - TH
+  - MY
+  - VN
+  - SG
+  - PH
+  - HK
+  - MO
+  - TW
+
 markets:
   - code: ID
   - code: TH

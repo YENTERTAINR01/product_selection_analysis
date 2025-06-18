@@ -3,7 +3,7 @@
 import os
 
 # === 配置区（主路径只改这里！）
-BASE_DIR = r"C:\D\Auser\public\jingluo\product_selection_analysis"
+BASE_DIR = r"/"
 RAW_DATA_DIR = os.path.join(BASE_DIR, 'raw_data_20250612')
 OUTPUT_DIR = os.path.join(BASE_DIR, 'output')
 CONFIG_DIR = os.path.join(BASE_DIR, 'config')

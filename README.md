@@ -1,128 +1,106 @@
+# Product Selection Analysis
 
-# 🧠 Product Selection Analysis 智能选品分析系统
-
-本项目用于基于【产品中文名称】的关键词趋势热度分析，自动筛选出最优产品，并按照热度生成资料文件夹。适用于 Shopee、Lazada 等东南亚跨境电商平台。
-
----
-
-## 📂 项目结构说明
-
-```
-product_selection_analysis/
-├── config/                        # 配置文件夹
-│   ├── run_config.yaml           # 主运行配置
-│   └── trend_keywords/           # 市场热词、停用词、同义词配置
-├── input/                        # 输入数据目录（每个市场一个子目录）
-│   └── raw_data_ID/              # 示例市场：印尼数据（table_*.csv）
-├── output/                       # 分析输出结果（包含优先产品列表及子文件夹）
-│   ├── priority_products_ID.csv
-│   └── priority_products_sorted_ID.csv
-├── src/
-│   ├── keyword_analysis/
-│   │   ├── run_market_analysis.py
-│   │   └── keyword_matcher.py
-│   ├── selection_analysis/
-│   │   └── selection_pipeline.py
-│   └── utils/
-│       └── save_product_folders.py
-├── run_selection_analysis.py     # 主程序入口
-├── todo_map.md                   # 待办任务记录
-└── README.md                     # 使用文档（当前文件）
-```
+> 🔍 基于市场和规则的产品选品分析框架  
+> 支持多市场（如🇮🇩印尼、🇹🇭泰国）数据处理、报告生成及产品素材文件夹创建。
 
 ---
 
-## 🚀 使用说明
+## 🚀 快速开始
 
-### 1. 准备输入数据
-
-每个市场应在 `input/` 下建一个文件夹，如 `raw_data_ID`，并放入命名为 `table_1_*.csv` 的产品表格，必须包含如下字段：
-
-| 字段名       | 示例                  |
-|--------------|-----------------------|
-| SKU          | 121-JLID00-001        |
-| 中文名称     | 烟酰胺美白祛斑霜30g   |
-| 包装形式     | 盒、袋                |
-| 类型         | 通货、新品、清库存    |
-| 货品状态     | 正常备货、下架等      |
-
----
-
-### 2. 配置关键词热度文件
-
-在 `config/trend_keywords/` 中为每个市场准备一份关键词文件，例如：
-
-```
-trend_keywords_ID.txt
-```
-
-内容为每行一个关键词，例如：
-
-```
-美白
-祛斑
-面膜
-洗面奶
-```
-
-如需添加同义词匹配，可以创建同名文件：
-
-```
-synonyms_ID.txt
-```
-
-格式参考：
-
-```
-美白,亮肤,提亮肤色
-祛痘,去痘,抗痘
-```
-
----
-
-### 3. 运行主程序
-
-确保 Python 版本 ≥ 3.8，安装 `jieba` 和 `pandas`：
-
+### 1. 克隆仓库
 ```bash
-pip install jieba pandas
-```
+git clone https://github.com/<your-org>/product_selection_analysis.git
+cd product_selection_analysis
+2. 创建并激活 Conda 环境
+bash
+复制
+编辑
+conda env create -f environment.yml   # 若无 environment.yml，可手动安装依赖
+conda activate cpy39quant
+3. 安装依赖（如果没有 environment.yml）
+bash
+复制
+编辑
+pip install -r requirements.txt
+4. 配置
+打开 config/run_config.yaml，根据实际需要修改：
 
-运行主程序：
+input_dir：原始数据存放路径（默认 input/raw_data_ID、input/raw_data_TH）。
 
-```bash
-python run_selection_analysis.py
-```
+output_dir：分析结果与产品库素材输出路径（默认 output/）。
 
----
+市场规则和关键词文件都在 config/market_rules/ 与 config/trend_keywords/。
 
-## 📈 输出说明
+5. 运行全流程
+bash
+复制
+编辑
+python run_selection_analysis.py --config config/run_config.yaml
+执行后，会生成：
 
-程序运行成功后将在 `output/` 下生成：
+报表：output/priority_products_*.csv、output/sales_reports/priority_products_sorted_ID.csv 等。
 
-- `priority_products_ID.csv`: 初步筛选后的产品列表
-- `priority_products_sorted_ID.csv`: 按关键词热度打分后的排序列表
-- `产品库_ID/`: 每个优选产品建立一个对应的子文件夹，命名示例：
+产品素材目录：
 
-```
-产品库_ID/
-├── 产品库_4679_烟酰胺美白祛斑霜_盒_通货_正常备货/
-├── 产品库_6845_水杨酸棉片绿色_袋_通货_清库存/
-```
+output/产品库_ID/
 
----
+output/产品库_TH/
 
-## 🧩 后续优化建议（见 todo_map.md）
+📂 项目结构
+graphql
+复制
+编辑
+.
+├── .github/               # GitHub Actions、Funding 等
+├── config/                # 运行与规则配置
+│   ├── run_config.yaml    # 主配置
+│   ├── market_rules/      # 市场规则定义
+│   └── trend_keywords/    # 趋势关键词文件
+├── docs/                  # 项目文档、架构与流程
+├── input/                 # 原始数据
+│   ├── raw_data_ID/
+│   └── raw_data_TH/
+├── logs/                  # 日志文件
+├── output/                # 分析结果和素材输出
+│   ├── *.csv              # 报表
+│   ├── sales_reports/     # 销量分析输出（后续添加）
+│   ├── 产品库_ID/         # 印尼市场素材目录
+│   └── 产品库_TH/         # 泰国市场素材目录
+├── scripts/               # 辅助脚本与归档
+├── src/                   # 核心代码
+│   ├── keyword_analysis/  # 市场关键词分析
+│   ├── selection_analysis/ # 选品流水线
+│   └── utils/             # 通用工具（如 save_product_folders）
+├── generate_tree.py       # 生成目录结构树（ls_R.txt）
+├── run_selection_analysis.py # 主入口脚本
+├── ls_R.txt               # 上一次目录快照
+├── README.md              # 本文档
+└── .gitignore             # 忽略规则
+🔧 模块说明
+src/selection_analysis/selection_pipeline.py
+主要的产品筛选逻辑，读取 priority_products_*.csv，生成报告和素材目录。
 
-- 同义词自动扩展与权重融合
-- 分词去除品牌名/无意义词（可选启用停用词）
-- 产品评分加入销量、评论数、上新时间等维度
-- 输出子文件夹内生成初始资料模板（如 info.txt）
+src/utils/save_product_folders.py
+根据市场、状态等字段，批量创建产品文件夹，支持“新品”、“通货”、“自主品牌”等标签。
 
----
+src/keyword_analysis/run_market_analysis.py
+依据配置文件与关键词，做市场趋势分析，供选品策略参考。
 
-## 👨‍💻 作者与贡献
+generate_tree.py
+用来把当前目录结构导出到 ls_R.txt，便于文档校对和项目审查。
 
-此项目由 BERLOOK 团队开发维护，旨在提升运营选品效率，支持后续自动选品、自动打包推送 WhatsApp 的整体流程。
+📈 添加销量分析
+建议在根目录下新建 notebooks/ 文件夹，存放 Jupyter 分析脚本，如 notebooks/sales_analysis.ipynb。
 
-欢迎提交 issue 或 PR 进行功能建议与合作开发。
+日常销量数据可统一放到 input/sales/，并在 notebook 中读取、可视化、导出到 output/sales_reports/。
+
+后续可结合爬虫脚本放到 scripts/ 或 src/utils，定时采集并更新数据。
+
+🤝 贡献
+Fork 本项目
+
+新建分支 feature/xxx
+
+提交 & PR（请附上测试截图或样例数据）
+
+审核通过后合并
